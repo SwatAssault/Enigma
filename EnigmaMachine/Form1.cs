@@ -246,8 +246,6 @@ namespace EnigmaMachine
                 }*/
                 BalbMass[index].BackColor = Color.Yellow;
             }
-            label1.Text = index.ToString();
-            label2.Text = lastindex.ToString();
 
         }
         private void textbox_KeyUp(object sender, KeyEventArgs e)
@@ -263,8 +261,6 @@ namespace EnigmaMachine
             }
             index = -1;
             lastindex = y;
-            label1.Text = index.ToString();
-            label2.Text = lastindex.ToString();
         }
 
         void countmaker()
@@ -492,15 +488,13 @@ namespace EnigmaMachine
         private void btnClear_Click(object sender, EventArgs e)
         {
             tbInsert.Text = "";
-           // tbOutput.Text = "";
+            tbOutput.Text = "";
             for(int i = 0; i < n; i++)
             {
                 BalbMass[i].BackColor = Color.White;
             }
-            //code = "";
+            code = "";
             UpDownR1.Value--;
-            label1.Text = index.ToString();
-            label2.Text = lastindex.ToString();
         }
 
 

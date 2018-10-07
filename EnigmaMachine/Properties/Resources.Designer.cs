@@ -93,6 +93,16 @@ namespace EnigmaMachine.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enigma3 {
+            get {
+                object obj = ResourceManager.GetObject("enigma3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap leather {
             get {
                 object obj = ResourceManager.GetObject("leather", resourceCulture);
