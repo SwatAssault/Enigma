@@ -291,9 +291,9 @@
             this.KeyBoardPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.KeyBoardPanel.Controls.Add(this.btnShowPlugboard);
             this.KeyBoardPanel.Controls.Add(this.lbKeyBoard);
-            this.KeyBoardPanel.Location = new System.Drawing.Point(-4, 594);
+            this.KeyBoardPanel.Location = new System.Drawing.Point(-1, 594);
             this.KeyBoardPanel.Name = "KeyBoardPanel";
-            this.KeyBoardPanel.Size = new System.Drawing.Size(906, 306);
+            this.KeyBoardPanel.Size = new System.Drawing.Size(917, 306);
             this.KeyBoardPanel.TabIndex = 23;
             // 
             // lbKeyBoard
@@ -339,7 +339,7 @@
             this.PlugboardPanel.Controls.Add(this.lbNumericPairCounter);
             this.PlugboardPanel.Location = new System.Drawing.Point(-1, 544);
             this.PlugboardPanel.Name = "PlugboardPanel";
-            this.PlugboardPanel.Size = new System.Drawing.Size(898, 356);
+            this.PlugboardPanel.Size = new System.Drawing.Size(901, 356);
             this.PlugboardPanel.TabIndex = 26;
             // 
             // lbPlugboard
@@ -426,6 +426,7 @@
             this.Controls.Add(this.UpDownR3);
             this.Controls.Add(this.UpDownR2);
             this.Controls.Add(this.UpDownR1);
+            this.MaximumSize = new System.Drawing.Size(914, 936);
             this.Name = "Form1";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
