@@ -69,7 +69,7 @@ namespace EnigmaMachine
 
             /////////////////KeyMass//////////////////
 
-            /*///////////////lbMass//////////////////
+            ///////////////lbMass//////////////////
             for(int i = 0; i < n; i++)
             {
                 lbMass[i] = new Label()
@@ -83,19 +83,21 @@ namespace EnigmaMachine
                     Height = 50,
                     TextAlign = ContentAlignment.MiddleCenter,
                 };
-                lbMass[i].Location = new Point(60 + (i * (lbMass[i].Width + 40)), 780);
+                lbMass[i].Location = new Point(60 + (i * (lbMass[i].Width + 40)), 90);
                 lbMass[i].MouseClick += new MouseEventHandler(Plugboard_MouseClick);
+                lbMass[i].MouseEnter += new System.EventHandler(Plugboard_MouseEnter);
+                lbMass[i].MouseLeave += new System.EventHandler(Plugboard_MouseLeave);
                 if (i >= 9 && i <= 16)
                 {
-                    lbMass[i].Location = new Point(73 + ((i - 9) * (lbMass[i].Width + 50)), 860);
+                    lbMass[i].Location = new Point(73 + ((i - 9) * (lbMass[i].Width + 50)), 170);
                 }
                 if (i >= 17 && i <= 25)
                 {
-                    lbMass[i].Location = new Point(60 + ((i - 17) * (lbMass[i].Width + 40)), 940);
+                    lbMass[i].Location = new Point(60 + ((i - 17) * (lbMass[i].Width + 40)), 250);
                 }
-                Controls.Add(lbMass[i]);
+                PlugboardPanel.Controls.Add(lbMass[i]);
             }
-            ///////////////lbMass//////////////////*/
+            ///////////////lbMass//////////////////
 
             //////////////BalbsMass////////////////
 
@@ -307,8 +309,6 @@ namespace EnigmaMachine
 
         void Plugboard_MouseClick(Object sender, EventArgs e)
         {
-            
-
             if(!perm_to_connect && (sender as Label).BackColor == Color.White && pairs_counter != 0)
             {
                 Label lb1 = (Label)sender;
@@ -335,6 +335,7 @@ namespace EnigmaMachine
                 colorchanger++;
             }
 
+
         }
 
         int light_to_down;
@@ -346,6 +347,15 @@ namespace EnigmaMachine
             Button btn = (Button)sender;
             x = Convert.ToChar(btn.Text);
             lbInsert.Text += x.ToString();
+
+            for(int i = 0; i < n; i++)
+            {
+                if(x == plugboard1[i])
+                {
+                    x = plugboard2[i];
+                    break;
+                }
+            }
 
             //////////////////ROTOR 1///////////////////
             for (int i = 0; i < n; i++)
@@ -459,6 +469,18 @@ namespace EnigmaMachine
             BalbMass[light_to_down].BackColor = Color.White;
         }
 
+        private void Plugboard_MouseEnter(object sender, EventArgs e)
+        {
+            Label balb = (Label)sender;
+            balb.Size = new System.Drawing.Size(52, 52);
+        }
+
+        private void Plugboard_MouseLeave(object sender, EventArgs e)
+        {
+            Label balb = (Label)sender;
+            balb.Size = new System.Drawing.Size(50, 50);
+        }
+
         private void btnUnplug_Click(object sender, EventArgs e)
         {
             pairs_counter = 10;
@@ -472,7 +494,43 @@ namespace EnigmaMachine
             colorchanger = 0;
 
         }
+    
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            KeyBoardPanel.BringToFront();
+            PlugboardPanel.Visible = false;
+        }
+
+
+        private void btnShowPlugboard_Click(object sender, EventArgs e)
+        {
+            PlugboardPanel.Visible = true;
+            PlugboardPanel.BringToFront();
+        }
+
+        
+
+        private void btnHide_Click(object sender, EventArgs e)
+        {
+            PlugboardPanel.Visible = false;
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            UpDownR1.Value = 1;
+            UpDownR2.Value = 1;
+            UpDownR3.Value = 1;
+        }
+
+        
+
+        private void btnClean_Click(object sender, EventArgs e)
+        {
+            lbInsert.Text = "";
+            lbOutput.Text = "";
+            code = "";
+        }
 
         decimal x1 = 1, x2 = 1, x3 = 1;
         private void btnSavePositions_Click(object sender, EventArgs e)

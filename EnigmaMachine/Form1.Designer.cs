@@ -50,11 +50,20 @@
             this.lbKeyBoard = new System.Windows.Forms.Label();
             this.lbInsert = new System.Windows.Forms.Label();
             this.lbOutput = new System.Windows.Forms.Label();
+            this.PlugboardPanel = new System.Windows.Forms.Panel();
+            this.lbPlugboard = new System.Windows.Forms.Label();
+            this.btnShowPlugboard = new System.Windows.Forms.Button();
+            this.btnHide = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnClean = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.KeyBoardPanel.SuspendLayout();
+            this.PlugboardPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // UpDownR1
@@ -158,6 +167,7 @@
             // 
             this.lbEnigmaCode.AutoSize = true;
             this.lbEnigmaCode.BackColor = System.Drawing.SystemColors.Control;
+            this.lbEnigmaCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbEnigmaCode.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEnigmaCode.Location = new System.Drawing.Point(621, 462);
             this.lbEnigmaCode.Name = "lbEnigmaCode";
@@ -237,10 +247,10 @@
             // 
             this.lbPairCounter.AutoSize = true;
             this.lbPairCounter.BackColor = System.Drawing.SystemColors.Control;
-            this.lbPairCounter.Font = new System.Drawing.Font("Showcard Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbPairCounter.Location = new System.Drawing.Point(478, 167);
+            this.lbPairCounter.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPairCounter.Location = new System.Drawing.Point(401, 24);
             this.lbPairCounter.Name = "lbPairCounter";
-            this.lbPairCounter.Size = new System.Drawing.Size(82, 16);
+            this.lbPairCounter.Size = new System.Drawing.Size(85, 21);
             this.lbPairCounter.TabIndex = 19;
             this.lbPairCounter.Text = "Pairs left : ";
             // 
@@ -248,10 +258,10 @@
             // 
             this.lbNumericPairCounter.AutoSize = true;
             this.lbNumericPairCounter.BackColor = System.Drawing.SystemColors.Control;
-            this.lbNumericPairCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbNumericPairCounter.Location = new System.Drawing.Point(557, 167);
+            this.lbNumericPairCounter.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbNumericPairCounter.Location = new System.Drawing.Point(489, 24);
             this.lbNumericPairCounter.Name = "lbNumericPairCounter";
-            this.lbNumericPairCounter.Size = new System.Drawing.Size(26, 17);
+            this.lbNumericPairCounter.Size = new System.Drawing.Size(28, 21);
             this.lbNumericPairCounter.TabIndex = 20;
             this.lbNumericPairCounter.Text = "10";
             // 
@@ -259,7 +269,7 @@
             // 
             this.btnUnplug.BackColor = System.Drawing.SystemColors.Control;
             this.btnUnplug.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnUnplug.Location = new System.Drawing.Point(506, 130);
+            this.btnUnplug.Location = new System.Drawing.Point(43, 19);
             this.btnUnplug.Name = "btnUnplug";
             this.btnUnplug.Size = new System.Drawing.Size(75, 34);
             this.btnUnplug.TabIndex = 21;
@@ -281,6 +291,7 @@
             // 
             this.KeyBoardPanel.BackColor = System.Drawing.Color.White;
             this.KeyBoardPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.KeyBoardPanel.Controls.Add(this.btnShowPlugboard);
             this.KeyBoardPanel.Controls.Add(this.lbKeyBoard);
             this.KeyBoardPanel.Location = new System.Drawing.Point(-4, 594);
             this.KeyBoardPanel.Name = "KeyBoardPanel";
@@ -319,18 +330,109 @@
             this.lbOutput.Size = new System.Drawing.Size(300, 41);
             this.lbOutput.TabIndex = 25;
             // 
+            // PlugboardPanel
+            // 
+            this.PlugboardPanel.BackColor = System.Drawing.Color.White;
+            this.PlugboardPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PlugboardPanel.Controls.Add(this.btnHide);
+            this.PlugboardPanel.Controls.Add(this.lbPlugboard);
+            this.PlugboardPanel.Controls.Add(this.btnUnplug);
+            this.PlugboardPanel.Controls.Add(this.lbPairCounter);
+            this.PlugboardPanel.Controls.Add(this.lbNumericPairCounter);
+            this.PlugboardPanel.Location = new System.Drawing.Point(-1, 544);
+            this.PlugboardPanel.Name = "PlugboardPanel";
+            this.PlugboardPanel.Size = new System.Drawing.Size(898, 356);
+            this.PlugboardPanel.TabIndex = 26;
+            // 
+            // lbPlugboard
+            // 
+            this.lbPlugboard.AutoSize = true;
+            this.lbPlugboard.Font = new System.Drawing.Font("Century Gothic", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbPlugboard.Location = new System.Drawing.Point(183, 14);
+            this.lbPlugboard.Name = "lbPlugboard";
+            this.lbPlugboard.Size = new System.Drawing.Size(168, 38);
+            this.lbPlugboard.TabIndex = 0;
+            this.lbPlugboard.Text = "Plugboard";
+            // 
+            // btnShowPlugboard
+            // 
+            this.btnShowPlugboard.BackColor = System.Drawing.Color.White;
+            this.btnShowPlugboard.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowPlugboard.Location = new System.Drawing.Point(712, 9);
+            this.btnShowPlugboard.Name = "btnShowPlugboard";
+            this.btnShowPlugboard.Size = new System.Drawing.Size(148, 36);
+            this.btnShowPlugboard.TabIndex = 27;
+            this.btnShowPlugboard.Text = "Show Plugboard";
+            this.btnShowPlugboard.UseVisualStyleBackColor = false;
+            this.btnShowPlugboard.Click += new System.EventHandler(this.btnShowPlugboard_Click);
+            // 
+            // btnHide
+            // 
+            this.btnHide.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnHide.Location = new System.Drawing.Point(771, 15);
+            this.btnHide.Name = "btnHide";
+            this.btnHide.Size = new System.Drawing.Size(115, 38);
+            this.btnHide.TabIndex = 22;
+            this.btnHide.Text = "Hide";
+            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.White;
+            this.btnReset.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnReset.Location = new System.Drawing.Point(43, 135);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(84, 27);
+            this.btnReset.TabIndex = 27;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnClean
+            // 
+            this.btnClean.BackColor = System.Drawing.Color.White;
+            this.btnClean.Font = new System.Drawing.Font("Century Gothic", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnClean.Location = new System.Drawing.Point(405, 518);
+            this.btnClean.Name = "btnClean";
+            this.btnClean.Size = new System.Drawing.Size(92, 41);
+            this.btnClean.TabIndex = 28;
+            this.btnClean.Text = "Clean";
+            this.btnClean.UseVisualStyleBackColor = false;
+            this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(395, 129);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(395, 149);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 898);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnClean);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.PlugboardPanel);
             this.Controls.Add(this.lbOutput);
             this.Controls.Add(this.lbInsert);
             this.Controls.Add(this.KeyBoardPanel);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnUnplug);
-            this.Controls.Add(this.lbNumericPairCounter);
-            this.Controls.Add(this.lbPairCounter);
             this.Controls.Add(this.btnSetPositions);
             this.Controls.Add(this.lbSave3);
             this.Controls.Add(this.lbSave2);
@@ -348,12 +450,15 @@
             this.Name = "Form1";
             this.RightToLeftLayout = true;
             this.Text = "ENIGMA";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.KeyBoardPanel.ResumeLayout(false);
             this.KeyBoardPanel.PerformLayout();
+            this.PlugboardPanel.ResumeLayout(false);
+            this.PlugboardPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,6 +488,14 @@
         private System.Windows.Forms.Label lbKeyBoard;
         private System.Windows.Forms.Label lbInsert;
         private System.Windows.Forms.Label lbOutput;
+        private System.Windows.Forms.Panel PlugboardPanel;
+        private System.Windows.Forms.Label lbPlugboard;
+        private System.Windows.Forms.Button btnShowPlugboard;
+        private System.Windows.Forms.Button btnHide;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnClean;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
