@@ -56,8 +56,6 @@
             this.btnHide = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).BeginInit();
@@ -368,13 +366,14 @@
             // 
             // btnHide
             // 
+            this.btnHide.BackColor = System.Drawing.Color.White;
             this.btnHide.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnHide.Location = new System.Drawing.Point(771, 15);
             this.btnHide.Name = "btnHide";
             this.btnHide.Size = new System.Drawing.Size(115, 38);
             this.btnHide.TabIndex = 22;
             this.btnHide.Text = "Hide";
-            this.btnHide.UseVisualStyleBackColor = true;
+            this.btnHide.UseVisualStyleBackColor = false;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
             // 
             // btnReset
@@ -401,31 +400,11 @@
             this.btnClean.UseVisualStyleBackColor = false;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(395, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(395, 149);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "label2";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 898);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.PlugboardPanel);
@@ -449,6 +428,7 @@
             this.Controls.Add(this.UpDownR1);
             this.Name = "Form1";
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ENIGMA";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).EndInit();
@@ -494,8 +474,6 @@
         private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnClean;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
 
