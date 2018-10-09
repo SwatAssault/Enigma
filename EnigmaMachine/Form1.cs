@@ -32,12 +32,44 @@ namespace EnigmaMachine
 
         Label[] lbMass = new Label[n];
         Label[] BalbMass = new Label[n];
+        Button[] KeyMass = new Button[n];
 
         public Form1()
         {
             InitializeComponent();
 
-            ///////////////lbMass//////////////////
+            /////////////////KeyMass//////////////////
+            for (int i = 0; i < n; i++)
+            {
+                KeyMass[i] = new Button()
+                {
+                    Name = "btnKeyboard" + i.ToString(),
+                    Text = Convert.ToChar(i + 65).ToString(),
+                    BackColor = Color.White,
+                    FlatStyle = System.Windows.Forms.FlatStyle.Flat,
+                    Font = new Font("Microsoft Sans Serif", 16, System.Drawing.FontStyle.Bold),
+                    FlatAppearance = { BorderSize = 1, MouseOverBackColor = Color.DarkKhaki },
+                    Width = 50,
+                    Height = 50,
+                    TextAlign = ContentAlignment.MiddleCenter,
+                };
+                KeyMass[i].Location = new Point(60 + (i * (KeyMass[i].Width + 40)), 55);
+                KeyMass[i].MouseDown += new MouseEventHandler(Keyboard_MouseDown);
+                KeyMass[i].MouseUp += new MouseEventHandler(Keyboard_MouseUp);
+                if (i >= 9 && i <= 16)
+                {
+                    KeyMass[i].Location = new Point(73 + ((i - 9) * (KeyMass[i].Width + 50)), 135);
+                }
+                if (i >= 17 && i <= 25)
+                {
+                    KeyMass[i].Location = new Point(60 + ((i - 17) * (KeyMass[i].Width + 40)), 215);
+                }
+                KeyBoardPanel.Controls.Add(KeyMass[i]);
+            }
+
+            /////////////////KeyMass//////////////////
+
+            /*///////////////lbMass//////////////////
             for(int i = 0; i < n; i++)
             {
                 lbMass[i] = new Label()
@@ -63,12 +95,9 @@ namespace EnigmaMachine
                 }
                 Controls.Add(lbMass[i]);
             }
-            ///////////////lbMass//////////////////
+            ///////////////lbMass//////////////////*/
 
             //////////////BalbsMass////////////////
-            
-
-            
 
             for (int i = 0; i < n; i++)
             {
@@ -83,15 +112,15 @@ namespace EnigmaMachine
                     Height = 50,
                     TextAlign = ContentAlignment.MiddleCenter,
                 };
-                BalbMass[i].Location = new Point(60 + (i * (BalbMass[i].Width + 40)), 280);
+                BalbMass[i].Location = new Point(60 + (i * (BalbMass[i].Width + 40)), 230);
                 
                 if (i >= 9 && i <= 16)
                 {
-                    BalbMass[i].Location = new Point(73 + ((i - 9) * (BalbMass[i].Width + 50)), 360);
+                    BalbMass[i].Location = new Point(73 + ((i - 9) * (BalbMass[i].Width + 50)), 310);
                 }
                 if (i >= 17 && i <= 25)
                 {
-                    BalbMass[i].Location = new Point(60 + ((i - 17) * (BalbMass[i].Width + 40)), 440);
+                    BalbMass[i].Location = new Point(60 + ((i - 17) * (BalbMass[i].Width + 40)), 390);
                 }
                 Controls.Add(BalbMass[i]);
             }
@@ -221,48 +250,6 @@ namespace EnigmaMachine
             lbSave3.Text = 1.ToString();
         }
 
-        private int downs = 0;
-        int index = -1;
-        int lastindex;
-        int y;
-
-        private void textbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (downs != 1)
-                e.Handled = true;
-            index = (int)(x) - 65;
-            y = index;
-        }
-        
-        private void textbox_KeyDown(object sender, KeyEventArgs e)
-        {
-            ++downs;
-            
-            if (index >= 0 && index != lastindex)
-            {
-               /* for (int i = 0; i < n; i++)
-                {
-                    BalbMass[i].BackColor = Color.White;
-                }*/
-                BalbMass[index].BackColor = Color.Yellow;
-            }
-
-        }
-        private void textbox_KeyUp(object sender, KeyEventArgs e)
-        {
-            downs = 0;
-           /* if(index >= 0)
-            {
-                BalbMass[index].BackColor = Color.White;
-            }*/
-            for (int i = 0; i < n; i++)
-            {
-                BalbMass[i].BackColor = Color.White;
-            }
-            index = -1;
-            lastindex = y;
-        }
-
         void countmaker()
         {
             if (position2 - position1 >= 0) count_2_1 = position2 - position1;
@@ -304,14 +291,6 @@ namespace EnigmaMachine
             if (UpDownR3.Value == 0) UpDownR3.Value = 26;
             position3 = UpDownR3.Value - 1;
 
-        }
-
-        private void tbInsert_DoubleClick(object sender, EventArgs e)
-        {
-            tbInsert.Text = "";
-            tbOutput.Text = "";
-            code = "";
-            UpDownR1.Value--;
         }
 
         bool perm_to_connect = false;
@@ -358,20 +337,15 @@ namespace EnigmaMachine
 
         }
 
-
-        private void tbInsert_TextChanged(object sender, EventArgs e)
+        int light_to_down;
+        private void Keyboard_MouseDown(object sender, EventArgs e)
         {
 
             UpDownR1.Value++;
 
-            if (tbInsert.Text.Length != 0)
-                for (int i = 0; i < n; i++)
-                     if(tbInsert.Text[tbInsert.Text.Length - 1] == plugboard1[i])
-                     {
-                        x = plugboard2[i];
-                        break;
-                     }
-         
+            Button btn = (Button)sender;
+            x = Convert.ToChar(btn.Text);
+            lbInsert.Text += x.ToString();
 
             //////////////////ROTOR 1///////////////////
             for (int i = 0; i < n; i++)
@@ -457,7 +431,7 @@ namespace EnigmaMachine
 
             /////////////////////ROTOR 2 BACK////////////////////
 
-            for(int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)
                 if (x == plugboard2[i])
                 {
                     x = plugboard1[i];
@@ -466,8 +440,24 @@ namespace EnigmaMachine
 
             code += x;
 
-            tbOutput.Text = code;
+            lbOutput.Text = code;
+
+            //////////Balb lights up//////////////
+            for(int i = 0; i < n; i++)
+            {
+                if(x.ToString() == BalbMass[i].Text)
+                {
+                    light_to_down = i;
+                    BalbMass[i].BackColor = Color.Yellow;
+                }
             }
+
+        }
+        ///////////balb goes down////////////
+        private void Keyboard_MouseUp(object sender, EventArgs e)
+        {
+            BalbMass[light_to_down].BackColor = Color.White;
+        }
 
         private void btnUnplug_Click(object sender, EventArgs e)
         {
@@ -481,20 +471,6 @@ namespace EnigmaMachine
             perm_to_connect = false;
             colorchanger = 0;
 
-        }
-
-        
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            tbInsert.Text = "";
-            tbOutput.Text = "";
-            for(int i = 0; i < n; i++)
-            {
-                BalbMass[i].BackColor = Color.White;
-            }
-            code = "";
-            UpDownR1.Value--;
         }
 
 

@@ -34,9 +34,7 @@
             this.lbR1 = new System.Windows.Forms.Label();
             this.lbR2 = new System.Windows.Forms.Label();
             this.lbR3 = new System.Windows.Forms.Label();
-            this.tbInsert = new System.Windows.Forms.TextBox();
             this.lbEnterWord = new System.Windows.Forms.Label();
-            this.tbOutput = new System.Windows.Forms.TextBox();
             this.lbEnigmaCode = new System.Windows.Forms.Label();
             this.lbTopSecret = new System.Windows.Forms.Label();
             this.btnSavePositions = new System.Windows.Forms.Button();
@@ -44,16 +42,19 @@
             this.lbSave2 = new System.Windows.Forms.Label();
             this.lbSave3 = new System.Windows.Forms.Label();
             this.btnSetPositions = new System.Windows.Forms.Button();
-            this.lbPlugboard_Click = new System.Windows.Forms.Label();
             this.lbPairCounter = new System.Windows.Forms.Label();
             this.lbNumericPairCounter = new System.Windows.Forms.Label();
             this.btnUnplug = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.KeyBoardPanel = new System.Windows.Forms.Panel();
+            this.lbKeyBoard = new System.Windows.Forms.Label();
+            this.lbInsert = new System.Windows.Forms.Label();
+            this.lbOutput = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.KeyBoardPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // UpDownR1
@@ -113,10 +114,10 @@
             // 
             this.lbR1.AutoSize = true;
             this.lbR1.BackColor = System.Drawing.SystemColors.Control;
-            this.lbR1.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbR1.Font = new System.Drawing.Font("Century Gothic", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbR1.Location = new System.Drawing.Point(39, 12);
             this.lbR1.Name = "lbR1";
-            this.lbR1.Size = new System.Drawing.Size(100, 24);
+            this.lbR1.Size = new System.Drawing.Size(93, 23);
             this.lbR1.TabIndex = 3;
             this.lbR1.Text = "ROTOR 1";
             // 
@@ -124,10 +125,10 @@
             // 
             this.lbR2.AutoSize = true;
             this.lbR2.BackColor = System.Drawing.SystemColors.Control;
-            this.lbR2.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbR2.Font = new System.Drawing.Font("Century Gothic", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbR2.Location = new System.Drawing.Point(148, 12);
             this.lbR2.Name = "lbR2";
-            this.lbR2.Size = new System.Drawing.Size(100, 24);
+            this.lbR2.Size = new System.Drawing.Size(93, 23);
             this.lbR2.TabIndex = 4;
             this.lbR2.Text = "ROTOR 2";
             // 
@@ -135,57 +136,32 @@
             // 
             this.lbR3.AutoSize = true;
             this.lbR3.BackColor = System.Drawing.SystemColors.Control;
-            this.lbR3.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbR3.Font = new System.Drawing.Font("Century Gothic", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbR3.Location = new System.Drawing.Point(258, 12);
             this.lbR3.Name = "lbR3";
-            this.lbR3.Size = new System.Drawing.Size(100, 24);
+            this.lbR3.Size = new System.Drawing.Size(93, 23);
             this.lbR3.TabIndex = 5;
             this.lbR3.Text = "ROTOR 3";
-            // 
-            // tbInsert
-            // 
-            this.tbInsert.BackColor = System.Drawing.SystemColors.Control;
-            this.tbInsert.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tbInsert.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbInsert.Location = new System.Drawing.Point(74, 642);
-            this.tbInsert.Name = "tbInsert";
-            this.tbInsert.Size = new System.Drawing.Size(263, 41);
-            this.tbInsert.TabIndex = 6;
-            this.tbInsert.TextChanged += new System.EventHandler(this.tbInsert_TextChanged);
-            this.tbInsert.DoubleClick += new System.EventHandler(this.tbInsert_DoubleClick);
-            this.tbInsert.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox_KeyDown);
-            this.tbInsert.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_KeyPress);
-            this.tbInsert.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textbox_KeyUp);
             // 
             // lbEnterWord
             // 
             this.lbEnterWord.AutoSize = true;
             this.lbEnterWord.BackColor = System.Drawing.SystemColors.Control;
-            this.lbEnterWord.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbEnterWord.Location = new System.Drawing.Point(102, 601);
+            this.lbEnterWord.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEnterWord.Location = new System.Drawing.Point(121, 462);
             this.lbEnterWord.Name = "lbEnterWord";
-            this.lbEnterWord.Size = new System.Drawing.Size(202, 29);
+            this.lbEnterWord.Size = new System.Drawing.Size(133, 30);
             this.lbEnterWord.TabIndex = 7;
-            this.lbEnterWord.Text = "Enter your Word";
-            // 
-            // tbOutput
-            // 
-            this.tbOutput.BackColor = System.Drawing.SystemColors.Control;
-            this.tbOutput.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbOutput.Location = new System.Drawing.Point(559, 642);
-            this.tbOutput.Name = "tbOutput";
-            this.tbOutput.ReadOnly = true;
-            this.tbOutput.Size = new System.Drawing.Size(263, 41);
-            this.tbOutput.TabIndex = 8;
+            this.lbEnterWord.Text = "Your Word";
             // 
             // lbEnigmaCode
             // 
             this.lbEnigmaCode.AutoSize = true;
             this.lbEnigmaCode.BackColor = System.Drawing.SystemColors.Control;
-            this.lbEnigmaCode.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbEnigmaCode.Location = new System.Drawing.Point(602, 601);
+            this.lbEnigmaCode.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEnigmaCode.Location = new System.Drawing.Point(621, 462);
             this.lbEnigmaCode.Name = "lbEnigmaCode";
-            this.lbEnigmaCode.Size = new System.Drawing.Size(167, 29);
+            this.lbEnigmaCode.Size = new System.Drawing.Size(172, 30);
             this.lbEnigmaCode.TabIndex = 9;
             this.lbEnigmaCode.Text = "Enigma Code";
             // 
@@ -193,17 +169,17 @@
             // 
             this.lbTopSecret.AutoSize = true;
             this.lbTopSecret.BackColor = System.Drawing.SystemColors.Control;
-            this.lbTopSecret.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbTopSecret.Location = new System.Drawing.Point(688, 12);
+            this.lbTopSecret.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTopSecret.Location = new System.Drawing.Point(703, 9);
             this.lbTopSecret.Name = "lbTopSecret";
-            this.lbTopSecret.Size = new System.Drawing.Size(192, 32);
+            this.lbTopSecret.Size = new System.Drawing.Size(162, 33);
             this.lbTopSecret.TabIndex = 12;
             this.lbTopSecret.Text = "TOP SECRET";
             // 
             // btnSavePositions
             // 
             this.btnSavePositions.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSavePositions.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSavePositions.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSavePositions.Location = new System.Drawing.Point(152, 135);
             this.btnSavePositions.Name = "btnSavePositions";
             this.btnSavePositions.Size = new System.Drawing.Size(84, 27);
@@ -248,7 +224,7 @@
             // btnSetPositions
             // 
             this.btnSetPositions.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSetPositions.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSetPositions.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetPositions.Location = new System.Drawing.Point(711, 90);
             this.btnSetPositions.Name = "btnSetPositions";
             this.btnSetPositions.Size = new System.Drawing.Size(145, 37);
@@ -257,23 +233,12 @@
             this.btnSetPositions.UseVisualStyleBackColor = false;
             this.btnSetPositions.Click += new System.EventHandler(this.btnSetPositions_Click);
             // 
-            // lbPlugboard_Click
-            // 
-            this.lbPlugboard_Click.AutoSize = true;
-            this.lbPlugboard_Click.BackColor = System.Drawing.SystemColors.Control;
-            this.lbPlugboard_Click.Font = new System.Drawing.Font("Showcard Gothic", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbPlugboard_Click.Location = new System.Drawing.Point(367, 688);
-            this.lbPlugboard_Click.Name = "lbPlugboard_Click";
-            this.lbPlugboard_Click.Size = new System.Drawing.Size(162, 35);
-            this.lbPlugboard_Click.TabIndex = 18;
-            this.lbPlugboard_Click.Text = "Plugboard";
-            // 
             // lbPairCounter
             // 
             this.lbPairCounter.AutoSize = true;
             this.lbPairCounter.BackColor = System.Drawing.SystemColors.Control;
             this.lbPairCounter.Font = new System.Drawing.Font("Showcard Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbPairCounter.Location = new System.Drawing.Point(392, 732);
+            this.lbPairCounter.Location = new System.Drawing.Point(478, 167);
             this.lbPairCounter.Name = "lbPairCounter";
             this.lbPairCounter.Size = new System.Drawing.Size(82, 16);
             this.lbPairCounter.TabIndex = 19;
@@ -284,7 +249,7 @@
             this.lbNumericPairCounter.AutoSize = true;
             this.lbNumericPairCounter.BackColor = System.Drawing.SystemColors.Control;
             this.lbNumericPairCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbNumericPairCounter.Location = new System.Drawing.Point(471, 732);
+            this.lbNumericPairCounter.Location = new System.Drawing.Point(557, 167);
             this.lbNumericPairCounter.Name = "lbNumericPairCounter";
             this.lbNumericPairCounter.Size = new System.Drawing.Size(26, 17);
             this.lbNumericPairCounter.TabIndex = 20;
@@ -294,7 +259,7 @@
             // 
             this.btnUnplug.BackColor = System.Drawing.SystemColors.Control;
             this.btnUnplug.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnUnplug.Location = new System.Drawing.Point(747, 692);
+            this.btnUnplug.Location = new System.Drawing.Point(506, 130);
             this.btnUnplug.Name = "btnUnplug";
             this.btnUnplug.Size = new System.Drawing.Size(75, 34);
             this.btnUnplug.TabIndex = 21;
@@ -312,29 +277,60 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
-            // btnClear
+            // KeyBoardPanel
             // 
-            this.btnClear.BackColor = System.Drawing.SystemColors.Control;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnClear.Location = new System.Drawing.Point(395, 642);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(112, 41);
-            this.btnClear.TabIndex = 23;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.KeyBoardPanel.BackColor = System.Drawing.Color.White;
+            this.KeyBoardPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.KeyBoardPanel.Controls.Add(this.lbKeyBoard);
+            this.KeyBoardPanel.Location = new System.Drawing.Point(-4, 594);
+            this.KeyBoardPanel.Name = "KeyBoardPanel";
+            this.KeyBoardPanel.Size = new System.Drawing.Size(906, 306);
+            this.KeyBoardPanel.TabIndex = 23;
+            // 
+            // lbKeyBoard
+            // 
+            this.lbKeyBoard.AutoSize = true;
+            this.lbKeyBoard.Font = new System.Drawing.Font("Century Gothic", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbKeyBoard.Location = new System.Drawing.Point(359, 0);
+            this.lbKeyBoard.Name = "lbKeyBoard";
+            this.lbKeyBoard.Size = new System.Drawing.Size(169, 39);
+            this.lbKeyBoard.TabIndex = 0;
+            this.lbKeyBoard.Text = "Keyboard";
+            // 
+            // lbInsert
+            // 
+            this.lbInsert.AutoSize = true;
+            this.lbInsert.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbInsert.Font = new System.Drawing.Font("Century Gothic", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbInsert.Location = new System.Drawing.Point(46, 518);
+            this.lbInsert.MinimumSize = new System.Drawing.Size(300, 41);
+            this.lbInsert.Name = "lbInsert";
+            this.lbInsert.Size = new System.Drawing.Size(300, 41);
+            this.lbInsert.TabIndex = 24;
+            // 
+            // lbOutput
+            // 
+            this.lbOutput.AutoSize = true;
+            this.lbOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbOutput.Font = new System.Drawing.Font("Century Gothic", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbOutput.Location = new System.Drawing.Point(556, 518);
+            this.lbOutput.MinimumSize = new System.Drawing.Size(300, 41);
+            this.lbOutput.Name = "lbOutput";
+            this.lbOutput.Size = new System.Drawing.Size(300, 41);
+            this.lbOutput.TabIndex = 25;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 1054);
-            this.Controls.Add(this.btnClear);
+            this.ClientSize = new System.Drawing.Size(898, 898);
+            this.Controls.Add(this.lbOutput);
+            this.Controls.Add(this.lbInsert);
+            this.Controls.Add(this.KeyBoardPanel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnUnplug);
             this.Controls.Add(this.lbNumericPairCounter);
             this.Controls.Add(this.lbPairCounter);
-            this.Controls.Add(this.lbPlugboard_Click);
             this.Controls.Add(this.btnSetPositions);
             this.Controls.Add(this.lbSave3);
             this.Controls.Add(this.lbSave2);
@@ -342,9 +338,7 @@
             this.Controls.Add(this.btnSavePositions);
             this.Controls.Add(this.lbTopSecret);
             this.Controls.Add(this.lbEnigmaCode);
-            this.Controls.Add(this.tbOutput);
             this.Controls.Add(this.lbEnterWord);
-            this.Controls.Add(this.tbInsert);
             this.Controls.Add(this.lbR3);
             this.Controls.Add(this.lbR2);
             this.Controls.Add(this.lbR1);
@@ -358,6 +352,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.KeyBoardPanel.ResumeLayout(false);
+            this.KeyBoardPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,9 +367,7 @@
         private System.Windows.Forms.Label lbR1;
         private System.Windows.Forms.Label lbR2;
         private System.Windows.Forms.Label lbR3;
-        private System.Windows.Forms.TextBox tbInsert;
         private System.Windows.Forms.Label lbEnterWord;
-        private System.Windows.Forms.TextBox tbOutput;
         private System.Windows.Forms.Label lbEnigmaCode;
         private System.Windows.Forms.Label lbTopSecret;
         private System.Windows.Forms.Button btnSavePositions;
@@ -381,12 +375,14 @@
         private System.Windows.Forms.Label lbSave2;
         private System.Windows.Forms.Label lbSave3;
         private System.Windows.Forms.Button btnSetPositions;
-        private System.Windows.Forms.Label lbPlugboard_Click;
         private System.Windows.Forms.Label lbPairCounter;
         private System.Windows.Forms.Label lbNumericPairCounter;
         private System.Windows.Forms.Button btnUnplug;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Panel KeyBoardPanel;
+        private System.Windows.Forms.Label lbKeyBoard;
+        private System.Windows.Forms.Label lbInsert;
+        private System.Windows.Forms.Label lbOutput;
     }
 }
 
