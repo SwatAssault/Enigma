@@ -38,6 +38,8 @@ namespace EnigmaMachine
         {
             InitializeComponent();
 
+            this.BackColor = Color.FromArgb(176, 63, 53);
+
             /////////////////KeyMass//////////////////
             for (int i = 0; i < n; i++)
             {
@@ -346,9 +348,10 @@ namespace EnigmaMachine
 
             Button btn = (Button)sender;
             x = Convert.ToChar(btn.Text);
-            lbInsert.Text += x.ToString();
+            tbInsert.Text += x.ToString();
+            tbInsert.SelectionStart = tbInsert.Text.Length;
 
-            for(int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
                 if(x == plugboard1[i])
                 {
@@ -450,10 +453,11 @@ namespace EnigmaMachine
 
             code += x;
 
-            lbOutput.Text = code;
+            tbOutput.Text = code;
+            tbOutput.SelectionStart = tbOutput.Text.Length;
 
             //////////Balb lights up//////////////
-            for(int i = 0; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
                 if(x.ToString() == BalbMass[i].Text)
                 {
@@ -527,8 +531,8 @@ namespace EnigmaMachine
 
         private void btnClean_Click(object sender, EventArgs e)
         {
-            lbInsert.Text = "";
-            lbOutput.Text = "";
+            tbInsert.Text = "";
+            tbOutput.Text = "";
             code = "";
         }
 

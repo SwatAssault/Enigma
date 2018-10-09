@@ -47,15 +47,15 @@
             this.btnUnplug = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KeyBoardPanel = new System.Windows.Forms.Panel();
-            this.lbKeyBoard = new System.Windows.Forms.Label();
-            this.lbInsert = new System.Windows.Forms.Label();
-            this.lbOutput = new System.Windows.Forms.Label();
-            this.PlugboardPanel = new System.Windows.Forms.Panel();
-            this.lbPlugboard = new System.Windows.Forms.Label();
             this.btnShowPlugboard = new System.Windows.Forms.Button();
+            this.lbKeyBoard = new System.Windows.Forms.Label();
+            this.PlugboardPanel = new System.Windows.Forms.Panel();
             this.btnHide = new System.Windows.Forms.Button();
+            this.lbPlugboard = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
+            this.tbInsert = new System.Windows.Forms.TextBox();
+            this.tbOutput = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).BeginInit();
@@ -155,7 +155,7 @@
             this.lbEnterWord.AutoSize = true;
             this.lbEnterWord.BackColor = System.Drawing.SystemColors.Control;
             this.lbEnterWord.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEnterWord.Location = new System.Drawing.Point(121, 462);
+            this.lbEnterWord.Location = new System.Drawing.Point(122, 471);
             this.lbEnterWord.Name = "lbEnterWord";
             this.lbEnterWord.Size = new System.Drawing.Size(133, 30);
             this.lbEnterWord.TabIndex = 7;
@@ -167,7 +167,7 @@
             this.lbEnigmaCode.BackColor = System.Drawing.SystemColors.Control;
             this.lbEnigmaCode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbEnigmaCode.Font = new System.Drawing.Font("Century Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEnigmaCode.Location = new System.Drawing.Point(621, 462);
+            this.lbEnigmaCode.Location = new System.Drawing.Point(621, 471);
             this.lbEnigmaCode.Name = "lbEnigmaCode";
             this.lbEnigmaCode.Size = new System.Drawing.Size(172, 30);
             this.lbEnigmaCode.TabIndex = 9;
@@ -296,6 +296,18 @@
             this.KeyBoardPanel.Size = new System.Drawing.Size(917, 306);
             this.KeyBoardPanel.TabIndex = 23;
             // 
+            // btnShowPlugboard
+            // 
+            this.btnShowPlugboard.BackColor = System.Drawing.Color.White;
+            this.btnShowPlugboard.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowPlugboard.Location = new System.Drawing.Point(712, 9);
+            this.btnShowPlugboard.Name = "btnShowPlugboard";
+            this.btnShowPlugboard.Size = new System.Drawing.Size(148, 36);
+            this.btnShowPlugboard.TabIndex = 27;
+            this.btnShowPlugboard.Text = "Show Plugboard";
+            this.btnShowPlugboard.UseVisualStyleBackColor = false;
+            this.btnShowPlugboard.Click += new System.EventHandler(this.btnShowPlugboard_Click);
+            // 
             // lbKeyBoard
             // 
             this.lbKeyBoard.AutoSize = true;
@@ -305,28 +317,6 @@
             this.lbKeyBoard.Size = new System.Drawing.Size(169, 39);
             this.lbKeyBoard.TabIndex = 0;
             this.lbKeyBoard.Text = "Keyboard";
-            // 
-            // lbInsert
-            // 
-            this.lbInsert.AutoSize = true;
-            this.lbInsert.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbInsert.Font = new System.Drawing.Font("Century Gothic", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbInsert.Location = new System.Drawing.Point(46, 518);
-            this.lbInsert.MinimumSize = new System.Drawing.Size(300, 41);
-            this.lbInsert.Name = "lbInsert";
-            this.lbInsert.Size = new System.Drawing.Size(300, 41);
-            this.lbInsert.TabIndex = 24;
-            // 
-            // lbOutput
-            // 
-            this.lbOutput.AutoSize = true;
-            this.lbOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbOutput.Font = new System.Drawing.Font("Century Gothic", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbOutput.Location = new System.Drawing.Point(556, 518);
-            this.lbOutput.MinimumSize = new System.Drawing.Size(300, 41);
-            this.lbOutput.Name = "lbOutput";
-            this.lbOutput.Size = new System.Drawing.Size(300, 41);
-            this.lbOutput.TabIndex = 25;
             // 
             // PlugboardPanel
             // 
@@ -342,28 +332,6 @@
             this.PlugboardPanel.Size = new System.Drawing.Size(901, 356);
             this.PlugboardPanel.TabIndex = 26;
             // 
-            // lbPlugboard
-            // 
-            this.lbPlugboard.AutoSize = true;
-            this.lbPlugboard.Font = new System.Drawing.Font("Century Gothic", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbPlugboard.Location = new System.Drawing.Point(183, 14);
-            this.lbPlugboard.Name = "lbPlugboard";
-            this.lbPlugboard.Size = new System.Drawing.Size(168, 38);
-            this.lbPlugboard.TabIndex = 0;
-            this.lbPlugboard.Text = "Plugboard";
-            // 
-            // btnShowPlugboard
-            // 
-            this.btnShowPlugboard.BackColor = System.Drawing.Color.White;
-            this.btnShowPlugboard.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnShowPlugboard.Location = new System.Drawing.Point(712, 9);
-            this.btnShowPlugboard.Name = "btnShowPlugboard";
-            this.btnShowPlugboard.Size = new System.Drawing.Size(148, 36);
-            this.btnShowPlugboard.TabIndex = 27;
-            this.btnShowPlugboard.Text = "Show Plugboard";
-            this.btnShowPlugboard.UseVisualStyleBackColor = false;
-            this.btnShowPlugboard.Click += new System.EventHandler(this.btnShowPlugboard_Click);
-            // 
             // btnHide
             // 
             this.btnHide.BackColor = System.Drawing.Color.White;
@@ -375,6 +343,16 @@
             this.btnHide.Text = "Hide";
             this.btnHide.UseVisualStyleBackColor = false;
             this.btnHide.Click += new System.EventHandler(this.btnHide_Click);
+            // 
+            // lbPlugboard
+            // 
+            this.lbPlugboard.AutoSize = true;
+            this.lbPlugboard.Font = new System.Drawing.Font("Century Gothic", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbPlugboard.Location = new System.Drawing.Point(183, 14);
+            this.lbPlugboard.Name = "lbPlugboard";
+            this.lbPlugboard.Size = new System.Drawing.Size(168, 38);
+            this.lbPlugboard.TabIndex = 0;
+            this.lbPlugboard.Text = "Plugboard";
             // 
             // btnReset
             // 
@@ -400,16 +378,39 @@
             this.btnClean.UseVisualStyleBackColor = false;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
+            // tbInsert
+            // 
+            this.tbInsert.Font = new System.Drawing.Font("Century Gothic", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbInsert.Location = new System.Drawing.Point(46, 518);
+            this.tbInsert.MaximumSize = new System.Drawing.Size(300, 41);
+            this.tbInsert.MinimumSize = new System.Drawing.Size(300, 41);
+            this.tbInsert.Name = "tbInsert";
+            this.tbInsert.ReadOnly = true;
+            this.tbInsert.Size = new System.Drawing.Size(300, 41);
+            this.tbInsert.TabIndex = 29;
+            // 
+            // tbOutput
+            // 
+            this.tbOutput.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tbOutput.Font = new System.Drawing.Font("Century Gothic", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbOutput.Location = new System.Drawing.Point(556, 518);
+            this.tbOutput.MaximumSize = new System.Drawing.Size(300, 40);
+            this.tbOutput.MinimumSize = new System.Drawing.Size(300, 40);
+            this.tbOutput.Name = "tbOutput";
+            this.tbOutput.ReadOnly = true;
+            this.tbOutput.Size = new System.Drawing.Size(300, 40);
+            this.tbOutput.TabIndex = 30;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 898);
+            this.Controls.Add(this.tbOutput);
+            this.Controls.Add(this.tbInsert);
             this.Controls.Add(this.btnClean);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.PlugboardPanel);
-            this.Controls.Add(this.lbOutput);
-            this.Controls.Add(this.lbInsert);
             this.Controls.Add(this.KeyBoardPanel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSetPositions);
@@ -467,14 +468,14 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel KeyBoardPanel;
         private System.Windows.Forms.Label lbKeyBoard;
-        private System.Windows.Forms.Label lbInsert;
-        private System.Windows.Forms.Label lbOutput;
         private System.Windows.Forms.Panel PlugboardPanel;
         private System.Windows.Forms.Label lbPlugboard;
         private System.Windows.Forms.Button btnShowPlugboard;
         private System.Windows.Forms.Button btnHide;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnClean;
+        private System.Windows.Forms.TextBox tbInsert;
+        private System.Windows.Forms.TextBox tbOutput;
     }
 }
 
