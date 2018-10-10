@@ -14,12 +14,12 @@ namespace EnigmaMachine
     {
 
         const int n = 26;
-        char[] rotor1 = new char[n];
-        char[] rotor2 = new char[n];
-        char[] rotor3 = new char[n];
+        char[] rotor1 = new char[n] { 'P','E','Z','U','O','H','X','S','C','V','F','M','T','B','G','L','R','I','N','Q','J','W','A','Y','D','K' };
+        char[] rotor2 = new char[n] { 'Z','O','U','E','S','Y','D','K','F','W','P','C','I','Q','X','H','M','V','B','L','G','N','J','R','A','T' };
+        char[] rotor3 = new char[n] { 'E','H','R','V','X','G','A','O','B','Q','U','S','I','M','Z','F','L','Y','N','W','K','T','P','D','J','C' };
         char[] plugboard1 = new char[n];
         char[] plugboard2 = new char[n];
-        char[] reflector = new char[n];
+        char[] reflector = new char[n] { 'Q','Y','H','O','G','N','E','C','V','P','U','Z','T','F','D','J','A','X','W','M','K','I','S','R','B','L' };
         char[] mass = new char[n];
 
         decimal count_2_1;
@@ -33,12 +33,13 @@ namespace EnigmaMachine
         Label[] lbMass = new Label[n];
         Label[] BalbMass = new Label[n];
         Button[] KeyMass = new Button[n];
+ 
 
         public Form1()
         {
             InitializeComponent();
 
-            this.BackColor = Color.FromArgb(176, 63, 53);
+            this.BackColor = Color.FromArgb(136, 83, 0);
 
             /////////////////KeyMass//////////////////
             for (int i = 0; i < n; i++)
@@ -140,114 +141,6 @@ namespace EnigmaMachine
                 plugboard2[i] = Convert.ToChar(i + 65);
                 mass[i] = Convert.ToChar(i + 65);
             }
-
-            rotor1[0] = 'E';
-            rotor1[1] = 'K';
-            rotor1[2] = 'M';
-            rotor1[3] = 'F';
-            rotor1[4] = 'L';
-            rotor1[5] = 'G';
-            rotor1[6] = 'D';
-            rotor1[7] = 'Q';
-            rotor1[8] = 'V';
-            rotor1[9] = 'Z';
-            rotor1[10] = 'N';
-            rotor1[11] = 'T';
-            rotor1[12] = 'O';
-            rotor1[13] = 'W';
-            rotor1[14] = 'Y';
-            rotor1[15] = 'H';
-            rotor1[16] = 'X';
-            rotor1[17] = 'U';
-            rotor1[18] = 'S';
-            rotor1[19] = 'P';
-            rotor1[20] = 'A';
-            rotor1[21] = 'I';
-            rotor1[22] = 'B';
-            rotor1[23] = 'R';
-            rotor1[24] = 'C';
-            rotor1[25] = 'J';
-
-            rotor2[0] = 'A';
-            rotor2[1] = 'J';
-            rotor2[2] = 'D';
-            rotor2[3] = 'K';
-            rotor2[4] = 'S';
-            rotor2[5] = 'I';
-            rotor2[6] = 'R';
-            rotor2[7] = 'U';
-            rotor2[8] = 'X';
-            rotor2[9] = 'B';
-            rotor2[10] = 'L';
-            rotor2[11] = 'H';
-            rotor2[12] = 'W';
-            rotor2[13] = 'T';
-            rotor2[14] = 'M';
-            rotor2[15] = 'C';
-            rotor2[16] = 'Q';
-            rotor2[17] = 'G';
-            rotor2[18] = 'Z';
-            rotor2[19] = 'N';
-            rotor2[20] = 'P';
-            rotor2[21] = 'Y';
-            rotor2[22] = 'F';
-            rotor2[23] = 'V';
-            rotor2[24] = 'O';
-            rotor2[25] = 'E';
-
-            rotor3[0] = 'B';
-            rotor3[1] = 'D';
-            rotor3[2] = 'F';
-            rotor3[3] = 'H';
-            rotor3[4] = 'J';
-            rotor3[5] = 'L';
-            rotor3[6] = 'C';
-            rotor3[7] = 'P';
-            rotor3[8] = 'R';
-            rotor3[9] = 'T';
-            rotor3[10] = 'X';
-            rotor3[11] = 'V';
-            rotor3[12] = 'Z';
-            rotor3[13] = 'N';
-            rotor3[14] = 'Y';
-            rotor3[15] = 'E';
-            rotor3[16] = 'I';
-            rotor3[17] = 'W';
-            rotor3[18] = 'G';
-            rotor3[19] = 'A';
-            rotor3[20] = 'K';
-            rotor3[21] = 'M';
-            rotor3[22] = 'U';
-            rotor3[23] = 'S';
-            rotor3[24] = 'Q';
-            rotor3[25] = 'O';
-
-            reflector[0] = 'Y';
-            reflector[1] = 'R';
-            reflector[2] = 'U';
-            reflector[3] = 'H';
-            reflector[4] = 'Q';
-            reflector[5] = 'S';
-            reflector[6] = 'L';
-            reflector[7] = 'D';
-            reflector[8] = 'P';
-            reflector[9] = 'X';
-            reflector[10] = 'N';
-            reflector[11] = 'G';
-            reflector[12] = 'O';
-            reflector[13] = 'K';
-            reflector[14] = 'M';
-            reflector[15] = 'I';
-            reflector[16] = 'E';
-            reflector[17] = 'B';
-            reflector[18] = 'F';
-            reflector[19] = 'Z';
-            reflector[20] = 'C';
-            reflector[21] = 'W';
-            reflector[22] = 'V';
-            reflector[23] = 'J';
-            reflector[24] = 'A';
-            reflector[25] = 'T';
 
             lbSave1.Text = 1.ToString();
             lbSave2.Text = 1.ToString();
