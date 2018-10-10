@@ -345,7 +345,7 @@
             this.btnClean.Name = "btnClean";
             this.btnClean.Size = new System.Drawing.Size(92, 41);
             this.btnClean.TabIndex = 28;
-            this.btnClean.Text = "Clean";
+            this.btnClean.Text = "Clear";
             this.btnClean.UseVisualStyleBackColor = false;
             this.btnClean.Click += new System.EventHandler(this.btnClean_Click);
             // 
