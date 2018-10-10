@@ -429,6 +429,13 @@ namespace EnigmaMachine
             code = "";
         }
 
+
+        private void btnRotorsSettings_Click(object sender, EventArgs e)
+        {
+            RotorsForm rf = new RotorsForm();
+            rf.ShowDialog();
+        }
+
         decimal x1 = 1, x2 = 1, x3 = 1;
         private void btnSavePositions_Click(object sender, EventArgs e)
         {

@@ -56,6 +56,7 @@
             this.lbSave1 = new System.Windows.Forms.Label();
             this.lbSave2 = new System.Windows.Forms.Label();
             this.lbSave3 = new System.Windows.Forms.Label();
+            this.btnRotorsSettings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).BeginInit();
@@ -69,7 +70,7 @@
             this.UpDownR1.BackColor = System.Drawing.SystemColors.Control;
             this.UpDownR1.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UpDownR1.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.UpDownR1.Location = new System.Drawing.Point(262, 60);
+            this.UpDownR1.Location = new System.Drawing.Point(262, 61);
             this.UpDownR1.Maximum = new decimal(new int[] {
             27,
             0,
@@ -87,7 +88,7 @@
             // 
             this.UpDownR2.BackColor = System.Drawing.SystemColors.Control;
             this.UpDownR2.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UpDownR2.Location = new System.Drawing.Point(152, 60);
+            this.UpDownR2.Location = new System.Drawing.Point(152, 61);
             this.UpDownR2.Maximum = new decimal(new int[] {
             27,
             0,
@@ -104,7 +105,7 @@
             // 
             this.UpDownR3.BackColor = System.Drawing.SystemColors.Control;
             this.UpDownR3.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.UpDownR3.Location = new System.Drawing.Point(43, 60);
+            this.UpDownR3.Location = new System.Drawing.Point(43, 61);
             this.UpDownR3.Maximum = new decimal(new int[] {
             27,
             0,
@@ -401,11 +402,24 @@
             this.lbSave3.TabIndex = 33;
             this.lbSave3.Text = "0";
             // 
+            // btnRotorsSettings
+            // 
+            this.btnRotorsSettings.BackColor = System.Drawing.Color.White;
+            this.btnRotorsSettings.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRotorsSettings.Location = new System.Drawing.Point(262, 121);
+            this.btnRotorsSettings.Name = "btnRotorsSettings";
+            this.btnRotorsSettings.Size = new System.Drawing.Size(84, 41);
+            this.btnRotorsSettings.TabIndex = 34;
+            this.btnRotorsSettings.Text = "Rotors Settings";
+            this.btnRotorsSettings.UseVisualStyleBackColor = false;
+            this.btnRotorsSettings.Click += new System.EventHandler(this.btnRotorsSettings_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 898);
+            this.Controls.Add(this.btnRotorsSettings);
             this.Controls.Add(this.lbSave3);
             this.Controls.Add(this.lbSave2);
             this.Controls.Add(this.lbSave1);
@@ -476,6 +490,7 @@
         private System.Windows.Forms.Label lbSave1;
         private System.Windows.Forms.Label lbSave2;
         private System.Windows.Forms.Label lbSave3;
+        private System.Windows.Forms.Button btnRotorsSettings;
     }
 }
 
