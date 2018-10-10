@@ -14,17 +14,27 @@ namespace EnigmaMachine
     {
 
         const int n = 26;
-        char[] rotor1 = new char[n];
-        char[] rotor2 = new char[n];
-        char[] rotor3 = new char[n];
-        char[] default_rotor1 = new char[n] { 'P','E','Z','U','O','H','X','S','C','V','F','M','T','B','G','L','R','I','N','Q','J','W','A','Y','D','K' };
-        char[] default_rotor2 = new char[n] { 'Z','O','U','E','S','Y','D','K','F','W','P','C','I','Q','X','H','M','V','B','L','G','N','J','R','A','T' };
-        char[] default_rotor3 = new char[n] { 'E','H','R','V','X','G','A','O','B','Q','U','S','I','M','Z','F','L','Y','N','W','K','T','P','D','J','C' };
-        char[] default_rotor4 = new char[n] { 'E','S','O','V','P','Z','J','A','Y','Q','U','I','R','H','X','L','N','F','T','G','K','D','C','M','W','B' };
-        char[] default_rotor5 = new char[n] { 'V','Z','B','R','G','I','T','Y','U','P','S','D','N','H','L','X','A','W','M','J','Q','O','F','E','C','K' };
-        char[] plugboard1 = new char[n];
-        char[] plugboard2 = new char[n];
-        char[] reflector = new char[n] { 'Q','Y','H','O','G','N','E','C','V','P','U','Z','T','F','D','J','A','X','W','M','K','I','S','R','B','L' };
+
+        public char[][] Mass_of_Rotors = new char[][]
+        {
+            new char[n],
+            new char[n],
+            new char[n],
+        };
+
+
+        public char[][] Mass_of_default_rotors = new char[][]
+        {
+            new char[n] { 'P','E','Z','U','O','H','X','S','C','V','F','M','T','B','G','L','R','I','N','Q','J','W','A','Y','D','K' },
+            new char[n] { 'Z','O','U','E','S','Y','D','K','F','W','P','C','I','Q','X','H','M','V','B','L','G','N','J','R','A','T' },
+            new char[n] { 'E','H','R','V','X','G','A','O','B','Q','U','S','I','M','Z','F','L','Y','N','W','K','T','P','D','J','C' },
+            new char[n] { 'E','S','O','V','P','Z','J','A','Y','Q','U','I','R','H','X','L','N','F','T','G','K','D','C','M','W','B' },
+            new char[n] { 'V','Z','B','R','G','I','T','Y','U','P','S','D','N','H','L','X','A','W','M','J','Q','O','F','E','C','K' },
+        };
+
+       static  char[] plugboard1 = new char[n];
+       static  char[] plugboard2 = new char[n];
+       static char[] reflector = new char[n] { 'Q','Y','H','O','G','N','E','C','V','P','U','Z','T','F','D','J','A','X','W','M','K','I','S','R','B','L' };
         char[] mass = new char[n];
 
         decimal count_2_1;
@@ -140,14 +150,14 @@ namespace EnigmaMachine
             UpDownR2.Value = 1;
             UpDownR3.Value = 1;
 
-            ///////////////Default rotors Settings//////////
+           /* ///////////////Default rotors Settings//////////
             for(int i = 0; i < n; i++)
             {
-                rotor1[i] = default_rotor1[i];
-                rotor2[i] = default_rotor2[i];
-                rotor3[i] = default_rotor3[i];
+                Mass_of_Rotors[0][i] = Mass_of_default_rotors[0][i];
+                Mass_of_Rotors[1][i] = Mass_of_default_rotors[1][i];
+                Mass_of_Rotors[2][i] = Mass_of_default_rotors[2][i];
             }
-            ///////////////Default rotors Settings//////////
+            ///////////////Default rotors Settings//////////*/
 
             for (int i = 0; i < n; i++)
             {
@@ -272,7 +282,7 @@ namespace EnigmaMachine
                 if (x == mass[i])
                 {
                     x = Convert.ToChar((i + Convert.ToInt16(position1)) % 26 + 65);
-                    x = rotor1[(i + Convert.ToInt16(position1)) % 26];
+                    x = Mass_of_Rotors[0][(i + Convert.ToInt16(position1)) % 26];
                     break;
                 }
             //////////////////ROTOR 1///////////////////
@@ -282,7 +292,7 @@ namespace EnigmaMachine
                 if (x == Convert.ToChar(i + 65))
                 {
                     x = Convert.ToChar((i + Convert.ToInt16(count_2_1)) % 26 + 65);
-                    x = rotor2[(i + Convert.ToInt16(count_2_1)) % 26];
+                    x = Mass_of_Rotors[1][(i + Convert.ToInt16(count_2_1)) % 26];
                     break;
                 }
             //////////////////ROTOR 2///////////////////
@@ -292,7 +302,7 @@ namespace EnigmaMachine
                 if (x == Convert.ToChar(i + 65))
                 {
                     x = Convert.ToChar((i + Convert.ToInt16(count_3_2)) % 26 + 65);
-                    x = rotor3[(i + Convert.ToInt16(count_3_2)) % 26];
+                    x = Mass_of_Rotors[2][(i + Convert.ToInt16(count_3_2)) % 26];
                     break;
                 }
             //////////////////ROTOR 3///////////////////
@@ -318,7 +328,7 @@ namespace EnigmaMachine
 
             /////////////////////ROTOR 3 BACK////////////////////
             for (int i = 0; i < n; i++)
-                if (rotor3[i] == x)
+                if (Mass_of_Rotors[2][i] == x)
                 {
                     x = Convert.ToChar(i + 65);
 
@@ -331,7 +341,7 @@ namespace EnigmaMachine
 
             /////////////////////ROTOR 2 BACK////////////////////
             for (int i = 0; i < n; i++)
-                if (rotor2[i] == x)
+                if (Mass_of_Rotors[1][i] == x)
                 {
                     x = Convert.ToChar(i + 65);
 
@@ -341,7 +351,7 @@ namespace EnigmaMachine
 
             /////////////////////ROTOR 2 BACK////////////////////
             for (int i = 0; i < n; i++)
-                if (rotor1[i] == x)
+                if (Mass_of_Rotors[0][i] == x)
                 {
                     x = Convert.ToChar(i + 65);
 
