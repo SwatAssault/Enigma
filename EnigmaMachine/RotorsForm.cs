@@ -15,6 +15,8 @@ namespace EnigmaMachine
         const int m = 5;
         CheckBox[] cbMass = new CheckBox[m];
 
+        Form1 fm1 = new Form1();
+
         int[] chosen_rotors = new int[3] { 0,1,2 };
 
         public RotorsForm()
@@ -34,22 +36,26 @@ namespace EnigmaMachine
 
                 cbMass[i].CheckStateChanged += new System.EventHandler(cb_CheckedChanged);
             }
-            Form1 fm1 = new Form1();
+
             clear_lb();
             for (int i = 0; i < 26; i++)
             {
-                lbTextRotor1.Text += (fm1.Mass_of_Rotors[0][i]).ToString();
+                lbTextRotor1.Text += (Program.Mass_of_buffers[0][i]).ToString();
             }
 
             for (int i = 0; i < 26; i++)
             {
-                lbTextRotor2.Text += (fm1.Mass_of_Rotors[1][i]).ToString();
+                lbTextRotor2.Text += (Program.Mass_of_buffers[1][i]).ToString();
             }
 
             for (int i = 0; i < 26; i++)
             {
-                lbTextRotor3.Text += (fm1.Mass_of_Rotors[2][i]).ToString();
+                lbTextRotor3.Text += (Program.Mass_of_buffers[2][i]).ToString();
             }
+
+            lbSelected1.Text = "Rotor " + (Program.buffer[0] + 1).ToString();
+            lbSelected2.Text = "Rotor " + (Program.buffer[1] + 1).ToString();
+            lbSelected3.Text = "Rotor " + (Program.buffer[2] + 1).ToString();
 
         }
 
@@ -123,24 +129,28 @@ namespace EnigmaMachine
         }
         //////////////////////////////////////////////////////////////////////
 
-        
+
         //////////////////Only 3 checkboxes/////////////////
-        
+        bool perm = true;
         int available_rotors_counter = 3;
 
         private void cb_CheckedChanged(object sender, EventArgs e)
         {
-            CheckBox cb = (CheckBox)sender;
-
-            available_rotors_counter--;
-
-            if(available_rotors_counter == 0)
+            if(perm)
             {
-                for(int i = 0; i < m; i++)
+                CheckBox cb = (CheckBox)sender;
+
+                available_rotors_counter--;
+
+                if (available_rotors_counter == 0)
                 {
-                    cbMass[i].Enabled = false;
+                    for (int i = 0; i < m; i++)
+                    {
+                        cbMass[i].Enabled = false;
+                    }
                 }
             }
+            
         }
         //////////////////Only 3 checkboxes/////////////////
 
@@ -148,45 +158,12 @@ namespace EnigmaMachine
         {
             for(int i = 0; i < m; i++)
             {
-                
-                cbMass[i].Checked = false;
                 cbMass[i].Enabled = true;
+                cbMass[i].Checked = false;
+
             }
             available_rotors_counter = 3;
 
-            for(int i = 0; i < 3; i++)
-            {
-                chosen_rotors[i] = i;
-            }
-            Form1 fm1 = new Form1();
-
-            for (int i = 0; i < 3; i++)
-            {
-                for (int t = 0; t < 26; t++)
-                {
-                    fm1.Mass_of_Rotors[i][t] = fm1.Mass_of_default_rotors[i][t];
-                }
-            }
-
-            lbSelected1.Text = "Rotor 1";
-            lbSelected2.Text = "Rotor 2";
-            lbSelected3.Text = "Rotor 3";
-
-            clear_lb();
-            for (int i = 0; i < 26; i++)
-            {
-                lbTextRotor1.Text += (fm1.Mass_of_Rotors[0][i]).ToString();
-            }
-
-            for (int i = 0; i < 26; i++)
-            {
-                lbTextRotor2.Text += (fm1.Mass_of_Rotors[1][i]).ToString();
-            }
-
-            for (int i = 0; i < 26; i++)
-            {
-                lbTextRotor3.Text += (fm1.Mass_of_Rotors[2][i]).ToString();
-            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -202,36 +179,18 @@ namespace EnigmaMachine
 
             }
 
-            Form1 fm1 = new Form1();
-
             for(int i = 0; i < 3; i++)
             {
-                for(int t = 0; t < 26; t++)
-                {
-                    fm1.Mass_of_Rotors[i][t] = fm1.Mass_of_default_rotors[chosen_rotors[i]][t]; 
-
-                }
+                Program.buffer[i] = chosen_rotors[i];
             }
 
-            clear_lb();
-            for (int i = 0; i < 26; i++)
+            for (int i = 0; i < 3; i++)
             {
-                lbTextRotor1.Text += (fm1.Mass_of_Rotors[0][i]).ToString();
+                Program.buffer[i] = chosen_rotors[i];
             }
 
-            for (int i = 0; i < 26; i++)
-            {
-                lbTextRotor2.Text += (fm1.Mass_of_Rotors[1][i]).ToString();
-            }
+            this.Close();
 
-            for (int i = 0; i < 26; i++)
-            {
-                lbTextRotor3.Text += (fm1.Mass_of_Rotors[2][i]).ToString();
-            }
-
-            lbSelected1.Text = "Rotor " + (chosen_rotors[0] + 1).ToString();
-            lbSelected2.Text = "Rotor " + (chosen_rotors[1] + 1).ToString();
-            lbSelected3.Text = "Rotor " + (chosen_rotors[2] + 1).ToString();
         }
 
         void clear_lb()
@@ -241,5 +200,14 @@ namespace EnigmaMachine
             lbTextRotor3.Text = "";
         }
 
+        private void btnCancel_MouseDown(object sender, MouseEventArgs e)
+        {
+            perm = false;
+        }
+
+        private void btnCancel_MouseUp(object sender, MouseEventArgs e)
+        {
+            perm = true;
+        }
     }
 }

@@ -48,7 +48,8 @@ namespace EnigmaMachine
         Label[] lbMass = new Label[n];
         Label[] BalbMass = new Label[n];
         Button[] KeyMass = new Button[n];
- 
+
+        public int[] chosen_rotorsForm1 = new int[3];
 
         public Form1()
         {
@@ -150,14 +151,14 @@ namespace EnigmaMachine
             UpDownR2.Value = 1;
             UpDownR3.Value = 1;
 
-           /* ///////////////Default rotors Settings//////////
+            ///////////////Default rotors Settings//////////
             for(int i = 0; i < n; i++)
             {
                 Mass_of_Rotors[0][i] = Mass_of_default_rotors[0][i];
                 Mass_of_Rotors[1][i] = Mass_of_default_rotors[1][i];
                 Mass_of_Rotors[2][i] = Mass_of_default_rotors[2][i];
             }
-            ///////////////Default rotors Settings//////////*/
+            ///////////////Default rotors Settings//////////
 
             for (int i = 0; i < n; i++)
             {
@@ -458,6 +459,20 @@ namespace EnigmaMachine
         {
             RotorsForm rf = new RotorsForm();
             rf.ShowDialog();
+            for(int i = 0; i < 3; i++)
+            {
+                chosen_rotorsForm1[i] = Program.buffer[i];
+            }         
+            
+            for(int i = 0; i < 3; i++)
+            {
+                for(int t = 0; t < n; t++)
+                {
+                    Mass_of_Rotors[i][t] = Mass_of_default_rotors[chosen_rotorsForm1[i]][t];
+                    Program.Mass_of_buffers[i][t] = Mass_of_default_rotors[chosen_rotorsForm1[i]][t];
+                }
+            }
+
         }
 
         decimal x1 = 1, x2 = 1, x3 = 1;
