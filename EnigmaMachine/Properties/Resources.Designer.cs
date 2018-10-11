@@ -143,6 +143,16 @@ namespace EnigmaMachine.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pbHelp {
+            get {
+                object obj = ResourceManager.GetObject("pbHelp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap qm1 {
             get {
                 object obj = ResourceManager.GetObject("qm1", resourceCulture);

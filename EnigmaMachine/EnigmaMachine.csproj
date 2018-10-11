@@ -58,6 +58,12 @@
     <Compile Include="MainFormHelp.Designer.cs">
       <DependentUpon>MainFormHelp.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlugboardHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlugboardHelp.Designer.cs">
+      <DependentUpon>PlugboardHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RotorsForm.cs">
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainFormHelp.resx">
       <DependentUpon>MainFormHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlugboardHelp.resx">
+      <DependentUpon>PlugboardHelp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -124,6 +133,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Main Help img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pbHelp.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

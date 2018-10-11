@@ -58,6 +58,7 @@
             this.btnRotorsSettings = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).BeginInit();
@@ -282,6 +283,7 @@
             // 
             this.PlugboardPanel.BackColor = System.Drawing.Color.White;
             this.PlugboardPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PlugboardPanel.Controls.Add(this.button2);
             this.PlugboardPanel.Controls.Add(this.btnHide);
             this.PlugboardPanel.Controls.Add(this.lbPlugboard);
             this.PlugboardPanel.Controls.Add(this.btnUnplug);
@@ -428,6 +430,17 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Image = global::EnigmaMachine.Properties.Resources.qm1;
+            this.button2.Location = new System.Drawing.Point(712, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 23;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,6 +520,7 @@
         private System.Windows.Forms.Label lbSave3;
         private System.Windows.Forms.Button btnRotorsSettings;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

@@ -486,6 +486,12 @@ namespace EnigmaMachine
             MfHelp.ShowDialog();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PlugboardHelp pbHelp = new PlugboardHelp();
+            pbHelp.ShowDialog();
+        }
+
         private void btnSavePositions_Click(object sender, EventArgs e)
         {
             lbSave1.Text = UpDownR1.Value.ToString();

@@ -31,6 +31,7 @@ namespace EnigmaMachine
                 cbMass[i] = new CheckBox()
                 {
                     Text = "Rotor " + (i + 1).ToString(),
+                    Enabled = false,
                 };
 
                 cbMass[i].Location = new Point(20, 45 + (i * (cbMass[i].Height + 11)));
@@ -58,6 +59,11 @@ namespace EnigmaMachine
             lbSelected1.Text = "Rotor " + (Program.buffer[0] + 1).ToString();
             lbSelected2.Text = "Rotor " + (Program.buffer[1] + 1).ToString();
             lbSelected3.Text = "Rotor " + (Program.buffer[2] + 1).ToString();
+
+            for(int i = 0; i < 3; i++)
+            {
+                cbMass[Program.buffer[i]].Checked = true;
+            }
 
         }
 
@@ -134,7 +140,7 @@ namespace EnigmaMachine
 
         //////////////////Only 3 checkboxes/////////////////
         bool perm = true;
-        int available_rotors_counter = 3;
+        int available_rotors_counter = 0;
 
         private void cb_CheckedChanged(object sender, EventArgs e)
         {
