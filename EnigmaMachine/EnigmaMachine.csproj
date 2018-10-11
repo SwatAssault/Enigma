@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChooseLanguageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseLanguageForm.Designer.cs">
+      <DependentUpon>ChooseLanguageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="RotorsForm.Designer.cs">
       <DependentUpon>RotorsForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChooseLanguageForm.resx">
+      <DependentUpon>ChooseLanguageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +145,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pbHelp.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\russia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\russia1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\england.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\german.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

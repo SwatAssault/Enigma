@@ -36,7 +36,6 @@
             this.lbR3 = new System.Windows.Forms.Label();
             this.lbEnterWord = new System.Windows.Forms.Label();
             this.lbEnigmaCode = new System.Windows.Forms.Label();
-            this.lbTopSecret = new System.Windows.Forms.Label();
             this.btnSavePositions = new System.Windows.Forms.Button();
             this.btnSetPositions = new System.Windows.Forms.Button();
             this.lbPairCounter = new System.Windows.Forms.Label();
@@ -57,14 +56,17 @@
             this.lbSave3 = new System.Windows.Forms.Label();
             this.btnRotorsSettings = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLanguage = new System.Windows.Forms.Button();
+            this.gbTopSecret = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).BeginInit();
             this.KeyBoardPanel.SuspendLayout();
             this.PlugboardPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbTopSecret.SuspendLayout();
             this.SuspendLayout();
             // 
             // UpDownR1
@@ -176,17 +178,6 @@
             this.lbEnigmaCode.TabIndex = 9;
             this.lbEnigmaCode.Text = "Enigma Code";
             // 
-            // lbTopSecret
-            // 
-            this.lbTopSecret.AutoSize = true;
-            this.lbTopSecret.BackColor = System.Drawing.Color.Transparent;
-            this.lbTopSecret.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTopSecret.Location = new System.Drawing.Point(639, 9);
-            this.lbTopSecret.Name = "lbTopSecret";
-            this.lbTopSecret.Size = new System.Drawing.Size(162, 33);
-            this.lbTopSecret.TabIndex = 12;
-            this.lbTopSecret.Text = "TOP SECRET";
-            // 
             // btnSavePositions
             // 
             this.btnSavePositions.BackColor = System.Drawing.Color.White;
@@ -204,7 +195,7 @@
             // 
             this.btnSetPositions.BackColor = System.Drawing.SystemColors.Control;
             this.btnSetPositions.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetPositions.Location = new System.Drawing.Point(648, 85);
+            this.btnSetPositions.Location = new System.Drawing.Point(11, 89);
             this.btnSetPositions.Name = "btnSetPositions";
             this.btnSetPositions.Size = new System.Drawing.Size(145, 37);
             this.btnSetPositions.TabIndex = 17;
@@ -370,7 +361,7 @@
             // 
             this.lbSave1.AutoSize = true;
             this.lbSave1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSave1.Location = new System.Drawing.Point(767, 51);
+            this.lbSave1.Location = new System.Drawing.Point(129, 55);
             this.lbSave1.Name = "lbSave1";
             this.lbSave1.Size = new System.Drawing.Size(21, 23);
             this.lbSave1.TabIndex = 31;
@@ -380,7 +371,7 @@
             // 
             this.lbSave2.AutoSize = true;
             this.lbSave2.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSave2.Location = new System.Drawing.Point(708, 51);
+            this.lbSave2.Location = new System.Drawing.Point(72, 55);
             this.lbSave2.Name = "lbSave2";
             this.lbSave2.Size = new System.Drawing.Size(21, 23);
             this.lbSave2.TabIndex = 32;
@@ -390,7 +381,7 @@
             // 
             this.lbSave3.AutoSize = true;
             this.lbSave3.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSave3.Location = new System.Drawing.Point(652, 51);
+            this.lbSave3.Location = new System.Drawing.Point(15, 55);
             this.lbSave3.Name = "lbSave3";
             this.lbSave3.Size = new System.Drawing.Size(21, 23);
             this.lbSave3.TabIndex = 33;
@@ -413,22 +404,12 @@
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Image = global::EnigmaMachine.Properties.Resources.qm1;
-            this.button1.Location = new System.Drawing.Point(825, 9);
+            this.button1.Location = new System.Drawing.Point(820, 9);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 35;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Image = global::EnigmaMachine.Properties.Resources.enigma3;
-            this.pictureBox1.Location = new System.Drawing.Point(366, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(257, 110);
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
@@ -441,16 +422,52 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = global::EnigmaMachine.Properties.Resources.enigma3;
+            this.pictureBox1.Location = new System.Drawing.Point(366, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(257, 110);
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnLanguage
+            // 
+            this.btnLanguage.BackColor = System.Drawing.Color.White;
+            this.btnLanguage.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnLanguage.Location = new System.Drawing.Point(802, 85);
+            this.btnLanguage.Name = "btnLanguage";
+            this.btnLanguage.Size = new System.Drawing.Size(87, 59);
+            this.btnLanguage.TabIndex = 36;
+            this.btnLanguage.Text = "Choose Language";
+            this.btnLanguage.UseVisualStyleBackColor = false;
+            this.btnLanguage.Click += new System.EventHandler(this.btnLanguage_Click);
+            // 
+            // gbTopSecret
+            // 
+            this.gbTopSecret.BackColor = System.Drawing.Color.Transparent;
+            this.gbTopSecret.Controls.Add(this.lbSave2);
+            this.gbTopSecret.Controls.Add(this.btnSetPositions);
+            this.gbTopSecret.Controls.Add(this.lbSave1);
+            this.gbTopSecret.Controls.Add(this.lbSave3);
+            this.gbTopSecret.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbTopSecret.Location = new System.Drawing.Point(629, 3);
+            this.gbTopSecret.Name = "gbTopSecret";
+            this.gbTopSecret.Size = new System.Drawing.Size(164, 136);
+            this.gbTopSecret.TabIndex = 37;
+            this.gbTopSecret.TabStop = false;
+            this.gbTopSecret.Text = "Top Secret";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 898);
+            this.Controls.Add(this.gbTopSecret);
+            this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRotorsSettings);
-            this.Controls.Add(this.lbSave3);
-            this.Controls.Add(this.lbSave2);
-            this.Controls.Add(this.lbSave1);
             this.Controls.Add(this.tbOutput);
             this.Controls.Add(this.tbInsert);
             this.Controls.Add(this.btnClean);
@@ -458,9 +475,7 @@
             this.Controls.Add(this.PlugboardPanel);
             this.Controls.Add(this.KeyBoardPanel);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnSetPositions);
             this.Controls.Add(this.btnSavePositions);
-            this.Controls.Add(this.lbTopSecret);
             this.Controls.Add(this.lbEnigmaCode);
             this.Controls.Add(this.lbEnterWord);
             this.Controls.Add(this.lbR3);
@@ -483,6 +498,8 @@
             this.PlugboardPanel.ResumeLayout(false);
             this.PlugboardPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbTopSecret.ResumeLayout(false);
+            this.gbTopSecret.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,7 +515,6 @@
         private System.Windows.Forms.Label lbR3;
         private System.Windows.Forms.Label lbEnterWord;
         private System.Windows.Forms.Label lbEnigmaCode;
-        private System.Windows.Forms.Label lbTopSecret;
         private System.Windows.Forms.Button btnSavePositions;
         private System.Windows.Forms.Button btnSetPositions;
         private System.Windows.Forms.Label lbPairCounter;
@@ -521,6 +537,8 @@
         private System.Windows.Forms.Button btnRotorsSettings;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnLanguage;
+        private System.Windows.Forms.GroupBox gbTopSecret;
     }
 }
 

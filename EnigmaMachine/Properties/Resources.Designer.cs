@@ -63,6 +63,16 @@ namespace EnigmaMachine.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap england {
+            get {
+                object obj = ResourceManager.GetObject("england", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap enigma {
             get {
                 object obj = ResourceManager.GetObject("enigma", resourceCulture);
@@ -96,6 +106,16 @@ namespace EnigmaMachine.Properties {
         internal static System.Drawing.Bitmap enigma3 {
             get {
                 object obj = ResourceManager.GetObject("enigma3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap german {
+            get {
+                object obj = ResourceManager.GetObject("german", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +176,26 @@ namespace EnigmaMachine.Properties {
         internal static System.Drawing.Bitmap qm1 {
             get {
                 object obj = ResourceManager.GetObject("qm1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap russia {
+            get {
+                object obj = ResourceManager.GetObject("russia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap russia1 {
+            get {
+                object obj = ResourceManager.GetObject("russia1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

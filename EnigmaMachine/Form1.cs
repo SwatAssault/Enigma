@@ -478,7 +478,7 @@ namespace EnigmaMachine
 
         }
 
-        decimal x1 = 1, x2 = 1, x3 = 1;
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -492,6 +492,13 @@ namespace EnigmaMachine
             pbHelp.ShowDialog();
         }
 
+        private void btnLanguage_Click(object sender, EventArgs e)
+        {
+            ChooseLanguageForm cLForm = new ChooseLanguageForm();
+            cLForm.ShowDialog();
+        }
+
+        decimal x1 = 1, x2 = 1, x3 = 1;
         private void btnSavePositions_Click(object sender, EventArgs e)
         {
             lbSave1.Text = UpDownR1.Value.ToString();
