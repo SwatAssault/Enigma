@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFormHelp));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
@@ -64,27 +65,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enigma Help";
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(20, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "How to Encrypte";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(321, 184);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Set and remember Rotor position\r\nbefore encrypting.\r\nStart typing your message in" +
-    " by\r\nclicking buttons on the Keyboard.\r\nYou will get an encrypted Enigma\r\nmessag" +
-    "e in the \"Enigma Code\"\r\nwindow.\r\n\r\n";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 263);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(316, 138);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Set exact same Rotor positions as\r\nthey were before Encrypting.\r\nType your encryp" +
+    "ted Enigma\r\nmessage and you will get the\r\ndecrypted message in the  \r\n\"Enigma Co" +
+    "de\" window.\r\n";
             // 
             // label3
             // 
@@ -97,16 +87,27 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "How to Decrypt";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 263);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(316, 138);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Set exact same Rotor positions as\r\nthey were before Encrypting.\r\nType your encryp" +
-    "ted Enigma\r\nmessage and you will get the\r\ndecrypted message in the  \r\n\"Enigma Co" +
-    "de\" window.\r\n";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(321, 184);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Set and remember Rotor position\r\nbefore encrypting.\r\nStart typing your message in" +
+    " by\r\nclicking buttons on the Keyboard.\r\nYou will get an encrypted Enigma\r\nmessag" +
+    "e in the \"Enigma Code\"\r\nwindow.\r\n\r\n";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(20, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "How to Encrypte";
             // 
             // label5
             // 
@@ -153,6 +154,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainFormHelp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainFormHelp";

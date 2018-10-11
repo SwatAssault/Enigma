@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.UpDownR1 = new System.Windows.Forms.NumericUpDown();
             this.UpDownR2 = new System.Windows.Forms.NumericUpDown();
             this.UpDownR3 = new System.Windows.Forms.NumericUpDown();
@@ -45,6 +46,7 @@
             this.btnShowPlugboard = new System.Windows.Forms.Button();
             this.lbKeyBoard = new System.Windows.Forms.Label();
             this.PlugboardPanel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnHide = new System.Windows.Forms.Button();
             this.lbPlugboard = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
@@ -56,7 +58,6 @@
             this.lbSave3 = new System.Windows.Forms.Label();
             this.btnRotorsSettings = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLanguage = new System.Windows.Forms.Button();
             this.gbTopSecret = new System.Windows.Forms.GroupBox();
@@ -285,6 +286,17 @@
             this.PlugboardPanel.Size = new System.Drawing.Size(901, 356);
             this.PlugboardPanel.TabIndex = 26;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Image = global::EnigmaMachine.Properties.Resources.qm1;
+            this.button2.Location = new System.Drawing.Point(712, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 23;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // btnHide
             // 
             this.btnHide.BackColor = System.Drawing.Color.White;
@@ -411,17 +423,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Image = global::EnigmaMachine.Properties.Resources.qm1;
-            this.button2.Location = new System.Drawing.Point(712, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 23;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
@@ -484,6 +485,7 @@
             this.Controls.Add(this.UpDownR3);
             this.Controls.Add(this.UpDownR2);
             this.Controls.Add(this.UpDownR1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(914, 936);
             this.Name = "Form1";
             this.RightToLeftLayout = true;

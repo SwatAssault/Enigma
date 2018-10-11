@@ -117,22 +117,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\leather.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\leatherforenigma.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\leatherforenigma1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\enigma.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\enigma1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\enigma2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\enigma.jpg" />
@@ -148,9 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\russia.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\russia1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\england.jpg" />

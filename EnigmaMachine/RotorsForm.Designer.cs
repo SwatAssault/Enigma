@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RotorsForm));
             this.lbSettings = new System.Windows.Forms.Label();
             this.gbDefaultRotors = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -466,6 +467,7 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.gbDefaultRotors);
             this.Controls.Add(this.lbSettings);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RotorsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rotors Settings";
