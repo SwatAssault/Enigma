@@ -55,26 +55,27 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lbCurrentRotors = new System.Windows.Forms.Label();
             this.lbSelected1 = new System.Windows.Forms.Label();
             this.lbSelected2 = new System.Windows.Forms.Label();
             this.lbSelected3 = new System.Windows.Forms.Label();
             this.lbTextRotor1 = new System.Windows.Forms.Label();
             this.lbTextRotor2 = new System.Windows.Forms.Label();
             this.lbTextRotor3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbDefaultRotors.SuspendLayout();
             this.rotorPanel3.SuspendLayout();
             this.rotorPanel2.SuspendLayout();
             this.rotorPanel4.SuspendLayout();
             this.rotorPanel5.SuspendLayout();
             this.rotorPanel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbSettings
             // 
             this.lbSettings.AutoSize = true;
             this.lbSettings.Font = new System.Drawing.Font("Century Gothic", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSettings.Location = new System.Drawing.Point(149, 9);
+            this.lbSettings.Location = new System.Drawing.Point(80, 9);
             this.lbSettings.Name = "lbSettings";
             this.lbSettings.Size = new System.Drawing.Size(201, 33);
             this.lbSettings.TabIndex = 0;
@@ -82,7 +83,7 @@
             // 
             // gbDefaultRotors
             // 
-            this.gbDefaultRotors.BackColor = System.Drawing.Color.White;
+            this.gbDefaultRotors.BackColor = System.Drawing.Color.Transparent;
             this.gbDefaultRotors.Controls.Add(this.btnSave);
             this.gbDefaultRotors.Controls.Add(this.btnCancel);
             this.gbDefaultRotors.Controls.Add(this.rotorPanel3);
@@ -381,21 +382,11 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Choose 3 out of 5 (60 ways to do it)";
             // 
-            // lbCurrentRotors
-            // 
-            this.lbCurrentRotors.AutoSize = true;
-            this.lbCurrentRotors.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbCurrentRotors.Location = new System.Drawing.Point(375, 19);
-            this.lbCurrentRotors.Name = "lbCurrentRotors";
-            this.lbCurrentRotors.Size = new System.Drawing.Size(234, 23);
-            this.lbCurrentRotors.TabIndex = 6;
-            this.lbCurrentRotors.Text = "Current Selected Rotors :";
-            // 
             // lbSelected1
             // 
             this.lbSelected1.AutoSize = true;
             this.lbSelected1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSelected1.Location = new System.Drawing.Point(375, 54);
+            this.lbSelected1.Location = new System.Drawing.Point(6, 26);
             this.lbSelected1.Name = "lbSelected1";
             this.lbSelected1.Size = new System.Drawing.Size(73, 23);
             this.lbSelected1.TabIndex = 7;
@@ -405,7 +396,7 @@
             // 
             this.lbSelected2.AutoSize = true;
             this.lbSelected2.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSelected2.Location = new System.Drawing.Point(375, 78);
+            this.lbSelected2.Location = new System.Drawing.Point(6, 50);
             this.lbSelected2.Name = "lbSelected2";
             this.lbSelected2.Size = new System.Drawing.Size(73, 23);
             this.lbSelected2.TabIndex = 8;
@@ -415,7 +406,7 @@
             // 
             this.lbSelected3.AutoSize = true;
             this.lbSelected3.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbSelected3.Location = new System.Drawing.Point(375, 102);
+            this.lbSelected3.Location = new System.Drawing.Point(6, 74);
             this.lbSelected3.Name = "lbSelected3";
             this.lbSelected3.Size = new System.Drawing.Size(73, 23);
             this.lbSelected3.TabIndex = 9;
@@ -425,7 +416,7 @@
             // 
             this.lbTextRotor1.AutoSize = true;
             this.lbTextRotor1.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbTextRotor1.Location = new System.Drawing.Point(465, 54);
+            this.lbTextRotor1.Location = new System.Drawing.Point(96, 26);
             this.lbTextRotor1.Name = "lbTextRotor1";
             this.lbTextRotor1.Size = new System.Drawing.Size(0, 21);
             this.lbTextRotor1.TabIndex = 10;
@@ -434,7 +425,7 @@
             // 
             this.lbTextRotor2.AutoSize = true;
             this.lbTextRotor2.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbTextRotor2.Location = new System.Drawing.Point(465, 78);
+            this.lbTextRotor2.Location = new System.Drawing.Point(96, 50);
             this.lbTextRotor2.Name = "lbTextRotor2";
             this.lbTextRotor2.Size = new System.Drawing.Size(0, 21);
             this.lbTextRotor2.TabIndex = 11;
@@ -443,23 +434,33 @@
             // 
             this.lbTextRotor3.AutoSize = true;
             this.lbTextRotor3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbTextRotor3.Location = new System.Drawing.Point(465, 102);
+            this.lbTextRotor3.Location = new System.Drawing.Point(96, 74);
             this.lbTextRotor3.Name = "lbTextRotor3";
             this.lbTextRotor3.Size = new System.Drawing.Size(0, 21);
             this.lbTextRotor3.TabIndex = 12;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbSelected1);
+            this.groupBox1.Controls.Add(this.lbTextRotor3);
+            this.groupBox1.Controls.Add(this.lbSelected2);
+            this.groupBox1.Controls.Add(this.lbTextRotor2);
+            this.groupBox1.Controls.Add(this.lbSelected3);
+            this.groupBox1.Controls.Add(this.lbTextRotor1);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Location = new System.Drawing.Point(366, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(378, 111);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Current Selected Rotors :";
             // 
             // RotorsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(747, 489);
-            this.Controls.Add(this.lbTextRotor3);
-            this.Controls.Add(this.lbTextRotor2);
-            this.Controls.Add(this.lbTextRotor1);
-            this.Controls.Add(this.lbSelected3);
-            this.Controls.Add(this.lbSelected2);
-            this.Controls.Add(this.lbSelected1);
-            this.Controls.Add(this.lbCurrentRotors);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnOK);
@@ -479,6 +480,8 @@
             this.rotorPanel5.PerformLayout();
             this.rotorPanel1.ResumeLayout(false);
             this.rotorPanel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,12 +516,12 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lbCurrentRotors;
         private System.Windows.Forms.Label lbSelected1;
         private System.Windows.Forms.Label lbSelected2;
         private System.Windows.Forms.Label lbSelected3;
         private System.Windows.Forms.Label lbTextRotor1;
         private System.Windows.Forms.Label lbTextRotor2;
         private System.Windows.Forms.Label lbTextRotor3;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -67,7 +67,7 @@
             // 
             // UpDownR1
             // 
-            this.UpDownR1.BackColor = System.Drawing.SystemColors.Control;
+            this.UpDownR1.BackColor = System.Drawing.Color.Silver;
             this.UpDownR1.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UpDownR1.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.UpDownR1.Location = new System.Drawing.Point(262, 61);
@@ -86,7 +86,7 @@
             // 
             // UpDownR2
             // 
-            this.UpDownR2.BackColor = System.Drawing.SystemColors.Control;
+            this.UpDownR2.BackColor = System.Drawing.Color.Silver;
             this.UpDownR2.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UpDownR2.Location = new System.Drawing.Point(152, 61);
             this.UpDownR2.Maximum = new decimal(new int[] {
@@ -103,7 +103,7 @@
             // 
             // UpDownR3
             // 
-            this.UpDownR3.BackColor = System.Drawing.SystemColors.Control;
+            this.UpDownR3.BackColor = System.Drawing.Color.Silver;
             this.UpDownR3.Font = new System.Drawing.Font("Showcard Gothic", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UpDownR3.Location = new System.Drawing.Point(43, 61);
             this.UpDownR3.Maximum = new decimal(new int[] {
@@ -187,7 +187,8 @@
             // 
             // btnSavePositions
             // 
-            this.btnSavePositions.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSavePositions.BackColor = System.Drawing.Color.White;
+            this.btnSavePositions.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnSavePositions.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnSavePositions.Location = new System.Drawing.Point(152, 135);
             this.btnSavePositions.Name = "btnSavePositions";
@@ -212,7 +213,7 @@
             // lbPairCounter
             // 
             this.lbPairCounter.AutoSize = true;
-            this.lbPairCounter.BackColor = System.Drawing.SystemColors.Control;
+            this.lbPairCounter.BackColor = System.Drawing.Color.Transparent;
             this.lbPairCounter.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPairCounter.Location = new System.Drawing.Point(401, 24);
             this.lbPairCounter.Name = "lbPairCounter";
@@ -223,7 +224,7 @@
             // lbNumericPairCounter
             // 
             this.lbNumericPairCounter.AutoSize = true;
-            this.lbNumericPairCounter.BackColor = System.Drawing.SystemColors.Control;
+            this.lbNumericPairCounter.BackColor = System.Drawing.Color.Transparent;
             this.lbNumericPairCounter.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbNumericPairCounter.Location = new System.Drawing.Point(489, 24);
             this.lbNumericPairCounter.Name = "lbNumericPairCounter";
@@ -327,7 +328,7 @@
             this.btnReset.BackColor = System.Drawing.Color.White;
             this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnReset.FlatAppearance.BorderSize = 5;
-            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnReset.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnReset.Location = new System.Drawing.Point(43, 135);
             this.btnReset.Name = "btnReset";
@@ -405,6 +406,7 @@
             // btnRotorsSettings
             // 
             this.btnRotorsSettings.BackColor = System.Drawing.Color.White;
+            this.btnRotorsSettings.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnRotorsSettings.Font = new System.Drawing.Font("Century Gothic", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRotorsSettings.Location = new System.Drawing.Point(262, 121);
             this.btnRotorsSettings.Name = "btnRotorsSettings";

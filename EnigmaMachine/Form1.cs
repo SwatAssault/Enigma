@@ -56,6 +56,9 @@ namespace EnigmaMachine
             InitializeComponent();
 
             this.BackColor = Color.FromArgb(136, 83, 0);
+            KeyBoardPanel.BackColor = Color.FromArgb(207, 207, 207); 
+            PlugboardPanel.BackColor = Color.FromArgb(31, 100, 88); 
+
 
             /////////////////KeyMass//////////////////
             for (int i = 0; i < n; i++)

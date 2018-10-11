@@ -12,6 +12,7 @@ namespace EnigmaMachine
 {
     public partial class RotorsForm : Form
     {
+
         const int m = 5;
         CheckBox[] cbMass = new CheckBox[m];
 
@@ -23,8 +24,9 @@ namespace EnigmaMachine
         {
             InitializeComponent();
 
+            this.BackColor = Color.FromArgb(255, 94, 87);
 
-            for(int i = 0; i < m; i++)
+            for (int i = 0; i < m; i++)
             {
                 cbMass[i] = new CheckBox()
                 {
