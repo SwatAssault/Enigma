@@ -467,6 +467,7 @@
             this.Controls.Add(this.gbDefaultRotors);
             this.Controls.Add(this.lbSettings);
             this.Name = "RotorsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rotors Settings";
             this.Load += new System.EventHandler(this.RotorsForm_Load);
             this.gbDefaultRotors.ResumeLayout(false);
