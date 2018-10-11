@@ -479,6 +479,13 @@ namespace EnigmaMachine
         }
 
         decimal x1 = 1, x2 = 1, x3 = 1;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainFormHelp MfHelp = new MainFormHelp();
+            MfHelp.ShowDialog();
+        }
+
         private void btnSavePositions_Click(object sender, EventArgs e)
         {
             lbSave1.Text = UpDownR1.Value.ToString();

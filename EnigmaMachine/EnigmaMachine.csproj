@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainFormHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormHelp.Designer.cs">
+      <DependentUpon>MainFormHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RotorsForm.cs">
@@ -62,6 +68,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormHelp.resx">
+      <DependentUpon>MainFormHelp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,6 +118,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\enigma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qm1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main Help img.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

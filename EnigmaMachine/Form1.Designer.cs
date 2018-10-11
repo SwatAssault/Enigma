@@ -42,7 +42,6 @@
             this.lbPairCounter = new System.Windows.Forms.Label();
             this.lbNumericPairCounter = new System.Windows.Forms.Label();
             this.btnUnplug = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KeyBoardPanel = new System.Windows.Forms.Panel();
             this.btnShowPlugboard = new System.Windows.Forms.Button();
             this.lbKeyBoard = new System.Windows.Forms.Label();
@@ -57,12 +56,14 @@
             this.lbSave2 = new System.Windows.Forms.Label();
             this.lbSave3 = new System.Windows.Forms.Label();
             this.btnRotorsSettings = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.KeyBoardPanel.SuspendLayout();
             this.PlugboardPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // UpDownR1
@@ -244,16 +245,6 @@
             this.btnUnplug.UseVisualStyleBackColor = false;
             this.btnUnplug.Click += new System.EventHandler(this.btnUnplug_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Image = global::EnigmaMachine.Properties.Resources.enigma3;
-            this.pictureBox1.Location = new System.Drawing.Point(366, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(257, 110);
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
-            // 
             // KeyBoardPanel
             // 
             this.KeyBoardPanel.BackColor = System.Drawing.Color.White;
@@ -416,11 +407,33 @@
             this.btnRotorsSettings.UseVisualStyleBackColor = false;
             this.btnRotorsSettings.Click += new System.EventHandler(this.btnRotorsSettings_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Image = global::EnigmaMachine.Properties.Resources.qm1;
+            this.button1.Location = new System.Drawing.Point(825, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(50, 50);
+            this.button1.TabIndex = 35;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Image = global::EnigmaMachine.Properties.Resources.enigma3;
+            this.pictureBox1.Location = new System.Drawing.Point(366, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(257, 110);
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 898);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRotorsSettings);
             this.Controls.Add(this.lbSave3);
             this.Controls.Add(this.lbSave2);
@@ -452,11 +465,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.KeyBoardPanel.ResumeLayout(false);
             this.KeyBoardPanel.PerformLayout();
             this.PlugboardPanel.ResumeLayout(false);
             this.PlugboardPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,6 +506,7 @@
         private System.Windows.Forms.Label lbSave2;
         private System.Windows.Forms.Label lbSave3;
         private System.Windows.Forms.Button btnRotorsSettings;
+        private System.Windows.Forms.Button button1;
     }
 }
 
