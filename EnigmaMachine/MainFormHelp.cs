@@ -15,6 +15,12 @@ namespace EnigmaMachine
         public MainFormHelp()
         {
             InitializeComponent();
+
+            int x = 936;
+           // int x = Screen.PrimaryScreen.WorkingArea.Width;
+            int y = Screen.PrimaryScreen.WorkingArea.Height;
+            ClientSize = new System.Drawing.Size(x, y);
+
         }
 
         private void btnOk_Click(object sender, EventArgs e)

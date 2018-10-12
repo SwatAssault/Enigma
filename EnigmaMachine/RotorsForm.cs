@@ -24,6 +24,10 @@ namespace EnigmaMachine
         {
             InitializeComponent();
 
+            int x = Screen.PrimaryScreen.WorkingArea.Width;
+            int y = Screen.PrimaryScreen.WorkingArea.Height;
+            ClientSize = new System.Drawing.Size(x, y);
+
             this.BackColor = Color.FromArgb(255, 94, 87);
 
             for (int i = 0; i < m; i++)

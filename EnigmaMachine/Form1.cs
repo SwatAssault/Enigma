@@ -55,6 +55,10 @@ namespace EnigmaMachine
         {
             InitializeComponent();
 
+            int x = 936;
+            int y = Screen.PrimaryScreen.WorkingArea.Height;
+            ClientSize = new System.Drawing.Size(x, y);
+
             this.BackColor = Color.FromArgb(136, 83, 0);
             KeyBoardPanel.BackColor = Color.FromArgb(207, 207, 207); 
             PlugboardPanel.BackColor = Color.FromArgb(31, 100, 88); 
