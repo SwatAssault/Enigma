@@ -61,6 +61,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLanguage = new System.Windows.Forms.Button();
             this.gbTopSecret = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UpDownR3)).BeginInit();
@@ -354,7 +355,7 @@
             this.tbInsert.MinimumSize = new System.Drawing.Size(300, 41);
             this.tbInsert.Name = "tbInsert";
             this.tbInsert.ReadOnly = true;
-            this.tbInsert.Size = new System.Drawing.Size(300, 43);
+            this.tbInsert.Size = new System.Drawing.Size(300, 41);
             this.tbInsert.TabIndex = 29;
             // 
             // tbOutput
@@ -366,7 +367,7 @@
             this.tbOutput.MinimumSize = new System.Drawing.Size(300, 40);
             this.tbOutput.Name = "tbOutput";
             this.tbOutput.ReadOnly = true;
-            this.tbOutput.Size = new System.Drawing.Size(300, 43);
+            this.tbOutput.Size = new System.Drawing.Size(300, 40);
             this.tbOutput.TabIndex = 30;
             // 
             // lbSave1
@@ -460,10 +461,20 @@
             this.gbTopSecret.TabStop = false;
             this.gbTopSecret.Text = "Top Secret";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(366, 148);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(898, 898);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.gbTopSecret);
             this.Controls.Add(this.btnLanguage);
             this.Controls.Add(this.button1);
@@ -540,6 +551,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnLanguage;
         private System.Windows.Forms.GroupBox gbTopSecret;
+        private System.Windows.Forms.Label label1;
     }
 }
 

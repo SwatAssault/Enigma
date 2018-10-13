@@ -49,11 +49,24 @@ namespace EnigmaMachine
         Label[] BalbMass = new Label[n];
         Button[] KeyMass = new Button[n];
 
+        Size resolution = System.Windows.Forms.Screen.PrimaryScreen.Bounds.Size;
+        double current_Y;
+        double current_X;
+
         public int[] chosen_rotorsForm1 = new int[3];
 
         public Form1()
         {
             InitializeComponent();
+
+            //////////////Dimentions////////////////
+            
+            current_Y = resolution.Height;
+            current_X = resolution.Width;
+
+            label1.Text = divide(1080,230).ToString();
+
+            //////////////Dimentions////////////////
 
             this.BackColor = Color.FromArgb(136, 83, 0);
             KeyBoardPanel.BackColor = Color.FromArgb(207, 207, 207); 
@@ -515,5 +528,12 @@ namespace EnigmaMachine
             UpDownR2.Value = x2;
             UpDownR3.Value = x3;
         }
+
+        private int divide(double demention, double num)
+        {
+            return (int)(Math.Round(current_Y / (demention / num)));
+        }
+
+
     }
 }
